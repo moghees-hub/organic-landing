@@ -19,12 +19,12 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .top-bar__text{color:var(--text);font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px}
 .top-bar__dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
-.top-bar__btn{background:var(--green);color:#000;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 18px;border-radius:20px;text-decoration:none;transition:transform .2s,background .2s;white-space:nowrap;cursor:pointer;border:none;font-family:'Inter',sans-serif}
+.top-bar__btn{background:var(--green);color:#000;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 18px;border-radius:9999px;text-decoration:none;transition:transform .2s,background .2s;white-space:nowrap;cursor:pointer;border:none;font-family:'Inter',sans-serif}
 .top-bar__btn:hover{transform:scale(1.05);background:#8fd44a}
 
 /* FLOATING WHATSAPP */
-.float-wa{position:fixed;bottom:28px;right:28px;z-index:999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,0.4);transition:transform .3s,box-shadow .3s;text-decoration:none;animation:floatBounce 3s ease-in-out infinite}
-.float-wa:hover{transform:scale(1.1);box-shadow:0 8px 36px rgba(37,211,102,0.6)}
+.float-wa{position:fixed;bottom:28px;right:28px;z-index:999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.28);transition:transform .3s,box-shadow .3s;text-decoration:none;animation:floatBounce 3s ease-in-out infinite}
+.float-wa:hover{transform:scale(1.1);box-shadow:0 10px 30px rgba(0,0,0,.34)}
 .float-wa svg{width:30px;height:30px;fill:#fff}
 @keyframes floatBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
@@ -43,7 +43,7 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .hero h1 em{font-style:normal;color:var(--green)}
 .hero__sub{font-size:16px;color:rgba(255,255,255,0.8);font-weight:700;margin-bottom:28px;max-width:800px;margin-left:auto;margin-right:auto}
 .hero__sub strong{color:var(--white);font-weight:700}
-.hero__cta{display:inline-block;background:var(--green);color:#000;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:16px 36px;border-radius:8px;text-decoration:none;transition:transform .2s,background .2s;margin-top:28px;margin-bottom:16px;cursor:pointer;border:none;font-family:'Inter',sans-serif}
+.hero__cta{display:inline-block;background:var(--green);color:#000;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:16px 36px;border-radius:9999px;text-decoration:none;transition:transform .2s,background .2s;margin-top:28px;margin-bottom:16px;cursor:pointer;border:none;font-family:'Inter',sans-serif}
 .hero__cta:hover{transform:scale(1.05);background:#8fd44a}
 .cta-inline{text-align:center;margin:12px auto 0;padding:0 20px;max-width:1100px}
 .cta-inline .hero__cta{margin:0;max-width:100%;white-space:nowrap;line-height:1.3}
@@ -143,7 +143,7 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .phase-item.active .phase-tab{display:none}
 .phase-tab__num{font-size:26px;font-weight:900;color:var(--green)}
 .phase-tab__title{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:800;color:var(--text);white-space:nowrap}
-.phase-tab__hint{position:absolute;bottom:18px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:9px;color:var(--gray);white-space:nowrap;letter-spacing:0.06em;text-transform:uppercase}
+.phase-tab__hint{position:absolute;bottom:18px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;color:var(--gray);white-space:nowrap;letter-spacing:0.06em;text-transform:uppercase}
 .phase-content{display:none;padding:32px 28px;animation:phaseIn 0.3s ease forwards}
 .phase-item.active .phase-content{display:block}
 @keyframes phaseIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:none}}
@@ -188,8 +188,8 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .pricing__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;align-items:start}
 .pricing__card{background:var(--white);border:2px solid var(--border);border-radius:20px;padding:36px 28px;position:relative;transition:transform .3s,box-shadow .3s}
 .pricing__card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.08)}
-.pricing__card--featured{border-color:var(--green);box-shadow:0 4px 24px rgba(127,200,56,0.12);transform:scale(1.05)}
-.pricing__card--featured:hover{transform:scale(1.05) translateY(-4px);box-shadow:0 20px 60px rgba(127,200,56,0.2)}
+.pricing__card--featured{border-color:var(--green);box-shadow:0 4px 18px rgba(0,0,0,.10);transform:scale(1.05)}
+.pricing__card--featured:hover{transform:scale(1.05) translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.16)}
 .pricing__popular{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#000;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 20px;border-radius:20px;white-space:nowrap}
 .pricing__plan{font-size:13px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}
 .pricing__tier{font-size:11px;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
@@ -202,10 +202,10 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .pricing__features{list-style:none;text-align:left;margin-bottom:24px}
 .pricing__features li{font-size:13px;color:var(--text-secondary);padding:7px 0;display:flex;align-items:flex-start;gap:10px;line-height:1.5}
 .pricing__features li::before{content:'\2713';color:var(--green);font-weight:800;font-size:13px;flex-shrink:0;margin-top:1px}
-.pricing__btn{display:inline-block;width:100%;background:var(--green);color:#000;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:14px 24px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(127,200,56,0.25);font-family:'Inter',sans-serif}
-.pricing__btn:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(127,200,56,0.4)}
+.pricing__btn{display:inline-block;width:100%;background:var(--green);color:#000;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:14px 24px;border-radius:9999px;text-decoration:none;border:none;cursor:pointer;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 16px rgba(0,0,0,.16);font-family:'Inter',sans-serif}
+.pricing__btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .pricing__btn--outline{background:var(--white);border:2px solid var(--border);color:var(--text);box-shadow:none}
-.pricing__btn--outline:hover{border-color:var(--green);color:var(--green);box-shadow:0 4px 20px rgba(127,200,56,0.15)}
+.pricing__btn--outline:hover{border-color:var(--green);color:var(--green);box-shadow:0 4px 16px rgba(0,0,0,.12)}
 .pricing__btn-sub{font-size:11px;color:var(--gray);font-weight:500;margin-top:8px;letter-spacing:.01em}
 
 /* TIER SELECTOR */
@@ -226,13 +226,13 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .bottom-cta .container{max-width:800px;margin:0 auto;padding:0 20px}
 
 /* WA BUTTON */
-.btn-wa{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;font-size:15px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:18px 48px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;margin-top:28px;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 28px rgba(37,211,102,0.35)}
-.btn-wa:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 44px rgba(37,211,102,0.5)}
+.btn-wa{display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#fff;font-size:15px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:18px 48px;border-radius:9999px;text-decoration:none;border:none;cursor:pointer;margin-top:28px;transition:transform .25s,box-shadow .25s;box-shadow:0 5px 18px rgba(0,0,0,.26)}
+.btn-wa:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 32px rgba(0,0,0,.30)}
 .btn-wa svg{width:22px;fill:#fff}
 
 /* FOOTER */
 .footer{background:var(--text);padding:32px 20px;text-align:center;border-top:2px solid rgba(127,200,56,0.15)}
-.footer p{font-size:11px;color:#999;line-height:1.8}
+.footer p{font-size:12px;color:#999;line-height:1.8}
 
 /* LIGHTBOX */
 #lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.94);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:20px}
@@ -280,7 +280,7 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
   .phase-item.active .phase-tab{display:flex;border-bottom:1px solid var(--border)}
   .phase-tab__title{writing-mode:horizontal-tb;transform:none;font-size:14px}
   .phase-tab__num{font-size:22px}
-  .phase-tab__hint{position:static;writing-mode:horizontal-tb;transform:none;margin-left:auto;font-size:10px}
+  .phase-tab__hint{position:static;writing-mode:horizontal-tb;transform:none;margin-left:auto;font-size:11px}
   .phase-item.active .phase-tab__hint{display:none}
   .phase-content{padding:20px}
   .phase-content__header .phase-content__num{display:none}
@@ -301,7 +301,7 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
   .hero{padding:72px 0 0}.hero__cta{margin-bottom:12px}.problem{padding:28px 0 12px}.problem p{line-height:1.4;margin-top:10px}.testi-scroll{padding-top:16px}.excuses{padding:20px 0}.guarantee{padding:20px 0}.program{padding:28px 0 12px}.transform-section{padding:20px 0 28px}.transform-grid{margin-top:20px}
   .proof-bar__inner{gap:8px}
   .proof-stat__num{font-size:22px}
-  .proof-stat__label{font-size:10px}
+  .proof-stat__label{font-size:11px}
   .transform-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .btn-wa{padding:15px 32px;font-size:13px}
   .float-wa{width:52px;height:52px;bottom:20px;right:20px}
@@ -310,21 +310,426 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
   .program__endnote{margin-top:20px}
   .program{padding-bottom:28px}
   .top-bar{gap:8px;padding:8px 12px}
-  .top-bar__text{font-size:10px}
-  .top-bar__btn{padding:6px 12px;font-size:10px;letter-spacing:.06em}
+  .top-bar__text{font-size:11px}
+  .top-bar__btn{padding:6px 12px;font-size:11px;letter-spacing:.06em}
   .pricing__grid{max-width:300px}
   .pricing__card{padding:24px 16px}
   .pricing__card--featured{padding:24px 16px}
 }
+
+/* ===== HERO: PA 'A' monogram, greyscale, full height of the hero ===== */
+.hero{position:relative;overflow:hidden}
+.hero::before{
+  content:'';display:block;position:absolute;z-index:0;pointer-events:none;
+  top:0;bottom:0;left:-16%;
+  width:auto;aspect-ratio:63 / 34;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 63 34'%3E%3Cpath d='M36.477 0.872009H25.83L0 33.128H10.773L21.168 20.276H52.29L36.477 0.872009ZM31.752 7.10901L37.296 13.535H26.586L31.752 7.10901Z' fill='%23FFFFFF'/%3E%3Cpath d='M25.578 26.324H57.204L63 33.065H20.79L25.578 26.324Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-size:contain;
+  opacity:.06;
+}
+.hero .container{position:relative;z-index:2}
+@media(max-width:1100px){.hero::before{left:-22%;opacity:.055}}
+@media(max-width:700px){.hero::before{left:-30%;opacity:.05}}
+
+/* ===== HERO SUB: panel ===== */
+.hero__sub{
+  display:inline-block;
+  font-size:18px;
+  font-weight:400;
+  color:rgba(255,255,255,.80);
+  line-height:1.6;
+  max-width:880px;
+  margin-top:4px;
+  padding:14px 26px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:10px;
+  text-align:center;
+}
+.hero h1{margin-bottom:12px}
+.hero__sub strong{color:#7FC838;font-weight:700}
+@media(max-width:900px){.hero__sub{font-size:16px;padding:14px 18px;max-width:46ch}}
+
+/* ===== VIDEO TESTIMONIALS: contained dark panel ===== */
+.problem{position:relative;padding-bottom:56px}
+.testi-scroll{
+  position:relative;z-index:2;margin-top:34px;
+  padding:56px 48px 48px;
+  max-width:940px;
+  gap:40px;
+  background:var(--black);border-radius:26px;
+  box-shadow:0 30px 70px rgba(10,16,20,.16);
+}
+.problem .container{position:relative;z-index:2}
+.testi-card{border-color:rgba(255,255,255,.10)}
+@media(max-width:900px){
+  .testi-scroll{margin-top:22px;padding:24px 16px 18px;border-radius:18px;max-width:none;
+                gap:14px;margin-left:14px;margin-right:14px}
+}
+
+/* the PA 'A' parked behind the panel - viewport-fixed, so the panel
+   slides over it on scroll. iOS ignores fixed attachment, so small
+   screens get a static mark instead. */
+.problem::before{
+  content:'';position:absolute;z-index:0;pointer-events:none;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 63 34'%3E%3Cpath d='M36.477 0.872009H25.83L0 33.128H10.773L21.168 20.276H52.29L36.477 0.872009ZM31.752 7.10901L37.296 13.535H26.586L31.752 7.10901Z' fill='%23192126'/%3E%3Cpath d='M25.578 26.324H57.204L63 33.065H20.79L25.578 26.324Z' fill='%23192126'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:auto 72vh;
+  background-position:right -360px center;
+  opacity:.07;
+}
+@media(max-width:900px){
+  .problem::before{background-attachment:scroll;background-size:auto 240px;
+                   background-position:right -90px center;opacity:.05}
+}
+
+/* ===== PROOF COPY: fragments small, payoff large ===== */
+.problem p.problem__lead{
+  font-size:17px;font-weight:600;color:#5b6165;
+  margin-top:18px;line-height:1.7;
+  max-width:620px;margin-left:auto;margin-right:auto;
+}
+.problem p.problem__payoff{
+  font-size:clamp(28px,3.6vw,42px);
+  font-weight:900;letter-spacing:-.025em;line-height:1.1;
+  color:#192126;
+  margin-top:10px;
+}
+@media(max-width:700px){
+  .problem p.problem__lead{font-size:15px;margin-top:12px}
+  .problem p.problem__payoff{margin-top:8px}
+}
+
+/* ===== STORY CAROUSELS: visible arrows + drag affordance ===== */
+.story-viewport{cursor:grab}
+.story-viewport.is-dragging{cursor:grabbing}
+.story-viewport img{user-select:none;-webkit-user-select:none;-webkit-user-drag:none}
+.story-nav{
+  width:38px;height:38px;
+  background:rgba(255,255,255,.93);
+  color:#192126;
+  font-size:21px;font-weight:700;
+  box-shadow:0 2px 12px rgba(0,0,0,.30);
+}
+.story-nav:hover{background:#fff}
+.story-nav:active{transform:translateY(-50%) scale(.94)}
+
+/* ===== SCALE: quiet figures, labels beneath ===== */
+.scale{background:var(--black);position:relative;overflow:hidden}
+.scale::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 65% 130% at 50% 112%, rgba(127,200,56,.14), transparent 68%);
+}
+.scale__grid{
+  position:relative;z-index:1;
+  display:flex;flex-wrap:nowrap;justify-content:center;align-items:flex-start;
+  gap:var(--scale-gap);
+  max-width:1180px;margin:0 auto;padding:34px 20px 44px;
+  border-top:1px solid rgba(255,255,255,.10);
+  --scale-gap:clamp(30px,5.2vw,80px);
+}
+.scale__item{position:relative;text-align:center;flex:0 0 auto}
+.scale__num{
+  display:block;white-space:nowrap;color:#fff;font-variant-numeric:tabular-nums;
+  font-size:clamp(26px,3.1vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1;
+}
+.scale__num i{font-style:normal;color:var(--green);font-weight:600;margin-left:.03em}
+.scale__lbl{
+  display:block;white-space:nowrap;text-transform:uppercase;
+  margin-top:11px;font-size:11.5px;font-weight:600;letter-spacing:.11em;
+  color:rgba(255,255,255,.45);
+}
+.scale__item + .scale__item::before{
+  content:'';position:absolute;left:calc(var(--scale-gap) / -2);
+  top:0;bottom:22%;width:1px;background:rgba(255,255,255,.10);
+}
+@media(max-width:900px){
+  .scale__grid{flex-wrap:wrap;row-gap:24px;--scale-gap:clamp(18px,4vw,38px);padding:26px 14px 34px}
+  .scale__item{flex:0 0 calc(50% - var(--scale-gap))}
+  .scale__item + .scale__item::before{display:none}
+  .scale__num{font-size:clamp(22px,5.6vw,34px)}
+  .scale__lbl{margin-top:9px;font-size:11px;letter-spacing:.08em}
+}
+
+/* ===== WHAT IS INCLUDED: photo cards ===== */
+.included{background:var(--light);padding:54px 0 60px;border-top:1px solid var(--border)}
+.included__inner{max-width:1180px;margin:0 auto;padding:0 20px;text-align:center}
+.included__eyebrow{
+  display:inline-block;margin-bottom:16px;
+  font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--green-dark);
+  border:1px solid rgba(127,200,56,.45);border-radius:999px;padding:8px 18px;background:#fff;
+}
+.included h2{
+  font-size:clamp(26px,4.2vw,44px);font-weight:900;letter-spacing:-.03em;
+  color:var(--text);line-height:1.1;
+}
+.included h2 em{font-style:normal;color:var(--green-dark)}
+.inc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  margin-top:34px;text-align:left;
+}
+.inc-card{
+  display:flex;align-items:center;gap:16px;
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  padding:14px 14px 14px 18px;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.inc-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(10,16,20,.09);border-color:#d7dce0}
+.inc-card__icon{
+  flex:0 0 48px;width:48px;height:48px;border-radius:13px;
+  background:var(--green);color:#0f1619;
+  display:flex;align-items:center;justify-content:center;
+}
+.inc-card__icon svg{width:23px;height:23px}
+.inc-card__label{
+  flex:1 1 auto;min-width:0;
+  font-size:15.5px;font-weight:800;letter-spacing:-.01em;line-height:1.25;color:var(--text);
+}
+.inc-card__shot{
+  flex:0 0 118px;width:118px;height:70px;border-radius:13px;overflow:hidden;background:#eceff2;
+}
+.inc-card__shot img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:1040px){
+  .inc-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .included{padding:38px 0 42px}
+  .inc-grid{grid-template-columns:1fr;gap:12px;margin-top:24px}
+  .inc-card{gap:12px;padding:11px 11px 11px 14px;border-radius:15px}
+  .inc-card__icon{flex-basis:42px;width:42px;height:42px;border-radius:11px}
+  .inc-card__icon svg{width:20px;height:20px}
+  .inc-card__label{font-size:14.5px}
+  .inc-card__shot{flex-basis:92px;width:92px;height:58px;border-radius:11px}
+}
+
+/* ===== CONSULTATION STEPS ===== */
+.steps{background:var(--light);padding:0 0 56px}
+.steps__panel{
+  max-width:1180px;margin:0 auto;padding:46px 28px 42px;
+  background:var(--black);border-radius:26px;text-align:center;
+  box-shadow:0 30px 70px rgba(10,16,20,.16);
+}
+.steps__panel h2{
+  font-size:clamp(23px,3.4vw,38px);font-weight:900;letter-spacing:-.03em;
+  color:#fff;line-height:1.15;margin:0 auto;max-width:900px;
+}
+.steps__panel h2 em{font-style:normal;color:var(--green)}
+.steps__row{
+  display:flex;align-items:stretch;justify-content:center;
+  gap:14px;margin:30px auto 0;flex-wrap:nowrap;
+}
+.steps__item{
+  flex:1 1 0;min-width:0;
+  display:flex;align-items:center;gap:12px;
+  background:#1c1c1c;border:1px solid rgba(255,255,255,.07);
+  border-radius:16px;padding:14px 16px;text-align:left;
+}
+.steps__icon{
+  flex:0 0 40px;width:40px;height:40px;border-radius:11px;
+  background:var(--green);color:#0f1619;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps__icon svg{width:21px;height:21px}
+.steps__label{font-size:14px;font-weight:700;line-height:1.3;color:rgba(255,255,255,.94);white-space:nowrap}
+.steps__arrow{
+  flex:0 0 auto;align-self:center;color:rgba(255,255,255,.75);
+  display:flex;align-items:center;
+}
+.steps__arrow svg{width:26px;height:26px}
+.steps__cta{
+  display:inline-block;margin-top:30px;
+  background:var(--green);color:#0f1619;
+  font-size:16px;font-weight:800;letter-spacing:-.01em;
+  padding:16px 34px;border-radius:9999px;text-decoration:none;
+  transition:transform .2s ease,filter .2s ease;
+}
+.steps__cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
+@media(max-width:1120px){
+  .steps__row{flex-wrap:wrap;gap:12px}
+  .steps__item{flex:1 1 100%;max-width:520px;margin:0 auto}
+  .steps__label{white-space:normal}
+  .steps__arrow{flex:1 1 100%;justify-content:center;transform:rotate(90deg)}
+  .steps__arrow svg{width:24px;height:24px}
+}
+@media(max-width:680px){
+  .steps{padding:4px 0 32px}
+  .steps__panel{padding:32px 16px 30px;border-radius:20px;margin:0 14px}
+  .steps__row{margin-top:22px}
+  .steps__item{padding:12px 14px;gap:12px;border-radius:14px}
+  .steps__label{font-size:14px}
+  .steps__cta{margin-top:24px;padding:15px 28px;font-size:15px}
+}
+
+/* ===== GOOGLE REVIEWS: our own, matched to the widget it replaces =====
+   Type, colours and spacing measured off the live Elfsight widget:
+   text 16/500/23 #111 . name 15/600/18 . date 12/500/16 at 50%
+   panels rgba(17,17,17,.05) r8 p24 . button #006DFF r4 . nav 32px at 50% */
+.rv{
+  max-width:1180px;margin:30px auto 0;padding:0 20px;
+  font-family:'Inter',sans-serif;color:#111;
+  --rv-face:rgba(17,17,17,.05);
+  --rv-mute:rgba(17,17,17,.5);
+  --rv-blue:#006DFF;
+  --rv-gap:20px;
+}
+.rv__bar{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  background:var(--rv-face);border-radius:8px;padding:24px;
+}
+.rv__barL{display:flex;flex-direction:column;gap:8px;text-align:left}
+.rv__brand{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:700;line-height:26px;color:#111}
+.rv__brand .rv-g{width:22px;height:22px}
+.rv__agg{display:flex;align-items:center;gap:8px}
+.rv__score{font-size:22px;font-weight:700;line-height:28px;color:#111}
+.rv__count{font-style:normal;font-size:12px;font-weight:500;line-height:14px;color:var(--rv-mute)}
+.rv__stars{display:inline-flex;gap:2px}
+.rv__stars svg{width:18px;height:18px;fill:#dadce0}
+.rv__stars svg.on{fill:#fbbc04}
+.rv__btn{
+  flex:0 0 auto;background:var(--rv-blue);color:#fff;text-decoration:none;
+  font-size:14px;font-weight:700;line-height:18px;padding:13px 20px;border-radius:4px;
+  transition:filter .2s ease;
+}
+.rv__btn:hover{filter:brightness(1.08)}
+
+.rv__vp{position:relative;margin-top:20px}
+.rv__track{
+  display:grid;grid-auto-flow:column;
+  grid-auto-columns:calc((100% - 2*var(--rv-gap))/3);
+  gap:var(--rv-gap);overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.rv__track::-webkit-scrollbar{display:none}
+.rvc{
+  scroll-snap-align:start;
+  background:var(--rv-face);border-radius:8px;padding:24px;
+  display:flex;flex-direction:column;text-align:left;min-width:0;
+}
+.rvc__top{display:flex;align-items:center;gap:12px}
+.rvc__av{
+  flex:0 0 40px;width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:16px;font-weight:600;background-position:center;
+}
+.rvc__name{display:block;font-size:15px;font-weight:600;line-height:18px;color:#111}
+.rvc__date{display:block;font-size:12px;font-weight:500;line-height:16px;color:var(--rv-mute);margin-top:3px}
+.rvc__stars{display:inline-flex;gap:2px;margin:14px 0 10px}
+.rvc__stars svg{width:17px;height:17px;fill:#dadce0}
+.rvc__stars svg.on{fill:#fbbc04}
+.rvc__text{
+  margin:0;font-size:16px;font-weight:500;line-height:23px;color:#111;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.rvc.is-open .rvc__text{-webkit-line-clamp:unset;overflow:visible}
+.rvc__more{
+  align-self:flex-start;margin-top:2px;background:none;border:0;padding:0;cursor:pointer;
+  font-family:inherit;font-size:16px;font-weight:500;line-height:23px;color:var(--rv-mute);
+}
+.rvc__more:hover{text-decoration:underline}
+.rvc__src{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:20px}
+.rvc__src .rv-g{width:24px;height:24px;flex:0 0 24px}
+.rvc__srcT{font-size:12px;font-weight:500;line-height:16px;color:var(--rv-mute)}
+.rvc__srcT a{display:block;font-size:14px;font-weight:500;line-height:22px;color:var(--rv-blue);text-decoration:none}
+.rvc__srcT a:hover{text-decoration:underline}
+
+/* the arrow overlaps the card edge by half its width only, so the
+   24px card padding always keeps it clear of the text */
+.rv__nav{
+  position:absolute;top:50%;z-index:2;
+  width:32px;height:32px;border:0;border-radius:50%;padding:0;cursor:pointer;
+  background:rgba(17,17,17,.5);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s ease,opacity .2s ease;
+}
+.rv__nav svg{width:15px;height:15px}
+.rv__nav:hover{background:rgba(17,17,17,.72)}
+.rv__nav--next{right:-16px;transform:translateY(-50%)}
+.rv__nav--prev{left:-16px;transform:translateY(-50%) rotate(180deg)}
+.rv__nav[disabled]{opacity:0;pointer-events:none}
+
+@media(max-width:900px){
+  .rv__track{grid-auto-columns:calc((100% - var(--rv-gap))/2)}
+  .rv__bar{padding:20px}
+  .rvc{padding:20px}
+}
+@media(max-width:600px){
+  .rv{margin-top:22px;--rv-gap:12px}
+  .rv__track{grid-auto-columns:86%}
+  .rv__btn{width:100%;text-align:center}
+  .rv__nav{display:none}
+  .rvc__text{font-size:15px;line-height:22px}
+}
+
+/* ===== CLIENT STORIES: dark ground + the PA 'A' parked left =====
+   The mark is viewport-fixed, so it holds its place on screen while the
+   carousels scroll over it. iOS ignores fixed attachment, so small
+   screens get a smaller static mark instead. */
+.stories-section{
+  position:relative;
+  background:var(--black);
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.stories-section h2{color:#fff}
+.stories-section h2 span{color:var(--green)}
+.stories-section p{color:rgba(255,255,255,.62);font-weight:600}
+.story-carousel{
+  background:#171717;
+  border-color:rgba(255,255,255,.10);
+  box-shadow:0 20px 46px rgba(0,0,0,.42);
+}
+.stories-section::before{
+  content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 63 34'%3E%3Cpath d='M36.477 0.872009H25.83L0 33.128H10.773L21.168 20.276H52.29L36.477 0.872009ZM31.752 7.10901L37.296 13.535H26.586L31.752 7.10901Z' fill='%23FFFFFF'/%3E%3Cpath d='M25.578 26.324H57.204L63 33.065H20.79L25.578 26.324Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:auto 100vh;
+  background-position:left -520px center;
+  opacity:.055;
+}
+.stories-section > *{position:relative;z-index:1}
+@media(max-width:900px){
+  .stories-section::before{
+    background-attachment:scroll;background-size:auto 240px;
+    background-position:left -70px center;opacity:.05;
+  }
+}
+
+/* ===== WIDTH SCALE =====
+   Nine content widths across the page made the content edge visibly
+   ragged on a wide screen. Three now, set here so future sections snap
+   to the scale instead of inventing a tenth value.
+     read  800  text you actually read
+     mid  1000  medium grids
+     wide 1180  wide grids and card rows
+   Two deliberate exceptions keep their own size: the hero column (860)
+   and the video panel (940), both chosen on purpose. */
+:root{--w-read:800px;--w-mid:1000px;--w-wide:1180px}
+
+.problem .container{max-width:var(--w-read)}
+.guarantee .container{max-width:var(--w-read)}
+.bottom-cta .container{max-width:var(--w-read)}
+
+.program .container{max-width:var(--w-mid)}
+.stories-grid{max-width:var(--w-mid)}
+
+.scale__grid{max-width:var(--w-wide)}
+.included__inner{max-width:var(--w-wide)}
+.steps__panel{max-width:var(--w-wide)}
+.rv{max-width:var(--w-wide)}
+.transform-grid{max-width:var(--w-wide)}
+
+/* ===== sticky top bar removed: reclaim the space it was holding ===== */
+.hero{padding-top:44px}
+@media(max-width:700px){.hero{padding-top:34px}}
 </style>
 </head>
 <body>
-
-<!-- STICKY TOP BAR -->
-<div class="top-bar">
-  <span class="top-bar__text"><span class="top-bar__dot"></span> Limited Spots Available</span>
-  <a href="javascript:void(0);" onclick="openBookingModal()" class="top-bar__btn">Book A Call</a>
-</div>
 
 <!-- FLOATING WHATSAPP -->
 <a href="https://go.physiqueacademy.com/whatsapp?text=Hi!%20I'm%20interested%20in%20the%20Physique%20Academy%20programme.%20Can%20you%20tell%20me%20more?" target="_blank" rel="noopener" class="float-wa" title="Message Us On WhatsApp">
@@ -340,8 +745,8 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         Join Over 5,000 Men Who Took Action
       </div>
     </div>
-    <h1 data-reveal><span style="white-space:nowrap">The Man You Are On The Inside</span> <br><em style="white-space:nowrap">Deserves To Show On The Outside.</em></h1>
-    <p class="hero__sub" data-reveal>Getting in great shape doesn't have to be a full time job. The men's lives we have transformed are busy with jobs, families, and every reason not to start, just like you.</p>
+    <h1 data-reveal><span style="white-space:nowrap">The man you are on the inside</span> <br><em style="white-space:nowrap">deserves to show on the outside.</em></h1>
+    <p class="hero__sub" data-reveal><strong>Getting in great shape doesn't have to be a full time job.</strong> The men's lives we have transformed are busy with jobs, families, and every reason not to start, just like you.</p>
     <div class="video-wrap" data-reveal>
       <script src="https://fast.wistia.com/embed/zqykcwwyzs.js" async type="module"></script>
       <style>wistia-player[media-id='zqykcwwyzs']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/zqykcwwyzs/swatch');display:block;filter:blur(5px);padding-top:56.25%}</style>
@@ -352,55 +757,45 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 </section>
 
 
+<!-- SCALE -->
+<section class="scale">
+  <div class="scale__grid" data-reveal>
+    <div class="scale__item">
+      <span class="scale__num"><span class="scale__n" data-to="5000" data-sep="1">0</span><i>+</i></span>
+      <span class="scale__lbl">Clients coached</span>
+    </div>
+    <div class="scale__item">
+      <span class="scale__num"><span class="scale__n" data-to="30">0</span><i>+</i></span>
+      <span class="scale__lbl">Coaches</span>
+    </div>
+    <div class="scale__item">
+      <span class="scale__num"><span class="scale__n" data-to="85">0</span><i>+</i></span>
+      <span class="scale__lbl">Countries</span>
+    </div>
+    <div class="scale__item">
+      <span class="scale__num"><span class="scale__n" data-to="300">0</span><i>+</i></span>
+      <span class="scale__lbl">Therapy sessions</span>
+    </div>
+  </div>
+</section>
+
 <!-- PROBLEM -->
 <section class="problem">
   <div class="container" data-reveal>
-    <h2>Hear It Directly From Men <em>Who Got Tired</em> <br><em>Of Waiting And Did Something About It</em></h2>
-    <p>Busy schedules. Demanding jobs. Young kids. Every reason not to start. They did it anyway.</p>
+    <h2>Hear it directly from men <em>who got tired</em> <br><em>of waiting and did something about it</em></h2>
+    <p class="problem__lead">Busy schedules. Demanding jobs. Young kids. Every reason not to start.</p>
+    <p class="problem__payoff">They did it anyway.</p>
   </div>
   <div class="testi-scroll" data-reveal>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/v6wrydquwp.js" async type="module"></script><style>wistia-player[media-id='v6wrydquwp']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/v6wrydquwp/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="v6wrydquwp" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Ross G</div><div class="testi-card__result">Coach Dylan</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/hjwdqzarde.js" async type="module"></script><style>wistia-player[media-id='hjwdqzarde']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/hjwdqzarde/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="hjwdqzarde" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Matt B</div><div class="testi-card__result">Coach Zayne</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/mr9467u1c2.js" async type="module"></script><style>wistia-player[media-id='mr9467u1c2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/mr9467u1c2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="mr9467u1c2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Hans R</div><div class="testi-card__result">Coach Kris</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/bqfnlg1d6w.js" async type="module"></script><style>wistia-player[media-id='bqfnlg1d6w']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/bqfnlg1d6w/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="bqfnlg1d6w" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Marc K</div><div class="testi-card__result">Coach Ash</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/j7ot6eeo0c.js" async type="module"></script><style>wistia-player[media-id='j7ot6eeo0c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/j7ot6eeo0c/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="j7ot6eeo0c" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Joe S</div><div class="testi-card__result">Coach Kris</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/hbpw88758w.js" async type="module"></script><style>wistia-player[media-id='hbpw88758w']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/hbpw88758w/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="hbpw88758w" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Rob J</div><div class="testi-card__result">Coach Connor</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/pjlzx8jn96.js" async type="module"></script><style>wistia-player[media-id='pjlzx8jn96']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/pjlzx8jn96/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="pjlzx8jn96" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Damien M</div><div class="testi-card__result">Coach Ash</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/cgg7c79ggc.js" async type="module"></script><style>wistia-player[media-id='cgg7c79ggc']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/cgg7c79ggc/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="cgg7c79ggc" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Craig D</div><div class="testi-card__result">Coach Sam</div></div></div>
-    <div class="testi-card testi-card--hide-mobile"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/x31cxixvo2.js" async type="module"></script><style>wistia-player[media-id='x31cxixvo2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/x31cxixvo2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="x31cxixvo2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Chris M</div><div class="testi-card__result">Coach Kris</div></div></div>
-  </div>
-</section>
-
-
-<!-- CLIENT STORIES CAROUSELS -->
-<section class="stories-section">
-  <div style="text-align:center;padding:0 20px" data-reveal>
-    <h2>Real Men. <span>Real Stories.</span></h2>
-    <p>Swipe through how busy men just like you transformed, step by step.</p>
-  </div>
-  <div class="stories-grid" data-reveal>
-    <div class="story-carousel" data-story="sean"></div>
-    <div class="story-carousel" data-story="michael"></div>
-    <div class="story-carousel" data-story="paul"></div>
-    <div class="story-carousel" data-story="craig"></div>
-    <div class="story-carousel" data-story="djmichael"></div>
-    <div class="story-carousel" data-story="ronan"></div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section class="guarantee">
-  <div class="container" data-reveal>
-    <span style="display:inline-block;background:#1a1a1a;color:#fff;border:1px solid #1a1a1a;border-radius:999px;padding:4px 18px;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;">Our Promise</span>
-    <h2 style="white-space:nowrap"><em>Get The Results</em> Or You Don't Pay</h2>
-    <p>We back our programme completely. If you follow the system and don't get the transformation we mapped out together on your call, you don't pay a single cent. Your result is our responsibility.</p>
-  </div>
-  <div style="max-width:1200px;margin:24px auto 0;padding:0 20px;max-height:480px;overflow:hidden" data-reveal>
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-f0936179-0fc9-48e8-a233-8d48e5eb5d5a" data-elfsight-app-lazy></div>
-  </div>
-  <div class="cta-inline" data-reveal>
-    <a href="javascript:void(0);" onclick="openBookingModal()" class="hero__cta">BOOK YOUR FREE CONSULTATION CALL</a>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/v6wrydquwp.js" async type="module"></script><style>wistia-player[media-id='v6wrydquwp']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/v6wrydquwp/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="v6wrydquwp" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Ross G</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/hjwdqzarde.js" async type="module"></script><style>wistia-player[media-id='hjwdqzarde']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/hjwdqzarde/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="hjwdqzarde" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Matt B</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/mr9467u1c2.js" async type="module"></script><style>wistia-player[media-id='mr9467u1c2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/mr9467u1c2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="mr9467u1c2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Hans R</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/bqfnlg1d6w.js" async type="module"></script><style>wistia-player[media-id='bqfnlg1d6w']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/bqfnlg1d6w/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="bqfnlg1d6w" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Marc K</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/j7ot6eeo0c.js" async type="module"></script><style>wistia-player[media-id='j7ot6eeo0c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/j7ot6eeo0c/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="j7ot6eeo0c" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Joe S</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/hbpw88758w.js" async type="module"></script><style>wistia-player[media-id='hbpw88758w']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/hbpw88758w/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="hbpw88758w" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Rob J</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/pjlzx8jn96.js" async type="module"></script><style>wistia-player[media-id='pjlzx8jn96']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/pjlzx8jn96/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="pjlzx8jn96" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Damien M</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/cgg7c79ggc.js" async type="module"></script><style>wistia-player[media-id='cgg7c79ggc']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/cgg7c79ggc/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="cgg7c79ggc" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Craig D</div></div></div>
+    <div class="testi-card testi-card--hide-mobile"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/x31cxixvo2.js" async type="module"></script><style>wistia-player[media-id='x31cxixvo2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/x31cxixvo2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="x31cxixvo2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Chris M</div></div></div>
   </div>
 </section>
 
@@ -408,12 +803,12 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 <!-- PROGRAM -->
 <section class="program">
   <div class="container" data-reveal>
-    <h2>A <em>Three-Phase</em> Approach That Demands <br>Commitment And Delivers Results.</h2>
+    <h2>A <em>three-phase</em> approach that demands <br>commitment and delivers results.</h2>
       <div class="phase-accordion">
         <div class="phase-item" onclick="togglePhase(this)">
           <div class="phase-tab">
             <span class="phase-tab__num">01</span>
-            <span class="phase-tab__title">Rapid Fat Loss &amp; Foundation</span>
+            <span class="phase-tab__title">Rapid fat loss &amp; foundation</span>
             <span class="phase-tab__hint">Click to open</span>
           </div>
           <div class="phase-content" onclick="event.stopPropagation()">
@@ -421,7 +816,7 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
               <span class="phase-content__num">01</span>
               <span class="phase-content__tag">The Starting Point</span>
             </div>
-            <h3>Rapid Fat Loss &amp; <em>Foundation</em></h3>
+            <h3>Rapid fat loss &amp; <em>foundation</em></h3>
             <p>Phase 1 focuses on rapid, controlled fat loss while establishing the foundations for long-term success. Get you to roughly 10-12% body fat, the kind of shape where you look like you belong on the cover of a magazine.</p>
             <p>Phase 1 exists to shatter limiting beliefs, prove what consistency can do, and show you what you can achieve when the strategy is correct. This is where results happen fast, executed intelligently and safely.</p>
             <div class="phase-stats">
@@ -434,15 +829,15 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <div class="phase-item" onclick="togglePhase(this)">
           <div class="phase-tab">
             <span class="phase-tab__num">02</span>
-            <span class="phase-tab__title">Reverse Diet &amp; Metabolic Reset</span>
+            <span class="phase-tab__title">Reverse diet &amp; metabolic reset</span>
             <span class="phase-tab__hint">Click to open</span>
           </div>
           <div class="phase-content" onclick="event.stopPropagation()">
             <div class="phase-content__header">
               <span class="phase-content__num">02</span>
-              <span class="phase-content__tag">Sustainability And Control</span>
+              <span class="phase-content__tag">Sustainability and control</span>
             </div>
-            <h3>Reverse Diet &amp; Metabolic <em>Reset</em></h3>
+            <h3>Reverse diet &amp; metabolic <em>reset</em></h3>
             <p>This is where fat loss stops being temporary and becomes a permanent part of your lifestyle. Phase 2 prevents rebound weight gain and turns short term progress into a stable, repeatable outcome.</p>
             <p>This phase builds confidence around eating, training, and long term bodyweight management. Calories are increased strategically to restore metabolic function, improve energy levels, and maintain the physique achieved in Phase 1.</p>
             <div class="phase-stats">
@@ -455,15 +850,15 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <div class="phase-item" onclick="togglePhase(this)">
           <div class="phase-tab">
             <span class="phase-tab__num">03</span>
-            <span class="phase-tab__title">Build, Perform &amp; Solidify</span>
+            <span class="phase-tab__title">Build, perform &amp; solidify</span>
             <span class="phase-tab__hint">Click to open</span>
           </div>
           <div class="phase-content" onclick="event.stopPropagation()">
             <div class="phase-content__header">
               <span class="phase-content__num">03</span>
-              <span class="phase-content__tag">Progression Beyond Fat Loss</span>
+              <span class="phase-content__tag">Progression beyond fat loss</span>
             </div>
-            <h3>Build, Perform &amp; <em>Solidify</em></h3>
+            <h3>Build, perform &amp; <em>solidify</em></h3>
             <p>This is where fat loss evolves into strength, performance, and long-term physical capability. Build muscle, increase strength, and pursue specific performance goals, physique, endurance, or sport-based, depending on the individual.</p>
             <p>Phase 3 solidifies habits, reinforces structure, and establishes a long term standard for training and lifestyle. The outcome is not just improved performance, but the ability to sustain it independently.</p>
             <div class="phase-stats">
@@ -483,10 +878,81 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 
 
 
+<!-- WHAT'S INCLUDED -->
+<section class="included">
+  <div class="included__inner">
+    <span class="included__eyebrow" data-reveal>All of it. Included.</span>
+    <h2 data-reveal>Everything you get the <em>day you start</em></h2>
+    <div class="inc-grid" data-reveal>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8c-3 0-5.2 2.2-5.2 5.6S9 21 12 21s5.2-4 5.2-7.4S15 8 12 8z"/><path d="M12 8c0-2.1 1.5-3.6 3.6-4.1"/></svg></span>
+        <span class="inc-card__label">Custom nutrition plans</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2309/custom-nutrition-plans-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2309/custom-nutrition-plans-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2309/custom-nutrition-plans-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Custom nutrition plans" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.6a3 3 0 0 0-5.6-1.5A2.8 2.8 0 0 0 4 8a3 3 0 0 0 .6 4.3A3 3 0 0 0 7 17a3 3 0 0 0 5 1.8z"/><path d="M12 5.6a3 3 0 0 1 5.6-1.5A2.8 2.8 0 0 1 20 8a3 3 0 0 1-.6 4.3A3 3 0 0 1 17 17a3 3 0 0 1-5 1.8z"/></svg></span>
+        <span class="inc-card__label">Mental performance support</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2262/mental-health-performance-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2262/mental-health-performance-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2262/mental-health-performance-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Mental performance support" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+        <span class="inc-card__label">Weekly video check-ins</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2308/check-ins-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2308/check-ins-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2308/check-ins-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Weekly video check-ins" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7l5 5.9a6.5 6.5 0 1 1-10 0z"/></svg></span>
+        <span class="inc-card__label">Bloodwork health analysis</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2269/bloodwork-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2269/bloodwork-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2269/bloodwork-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Bloodwork health analysis" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8 8 0 0 1-8.6 8 8.6 8.6 0 0 1-3.8-.9L3.5 20l1.5-4.6a8 8 0 0 1-1-3.9 8 8 0 0 1 8.5-8 8 8 0 0 1 8 8z"/></svg></span>
+        <span class="inc-card__label">1-1 WhatsApp &amp; Zoom support</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2268/whatsapp-zoom-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2268/whatsapp-zoom-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2268/whatsapp-zoom-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="1-1 WhatsApp and Zoom support" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+        <span class="inc-card__label">Access to our training app</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2324/access-to-training-app-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2324/access-to-training-app-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2324/access-to-training-app-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Access to our training app" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+        <span class="inc-card__label">Private community group</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/2331/private-support-group-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/2331/private-support-group-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/2331/private-support-group-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Private community group" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h12v3.5H6z"/><path d="M7.2 7.5h9.6V19a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2z"/><path d="M12 11.5v5"/><path d="M9.5 14h5"/></svg></span>
+        <span class="inc-card__label">Supplement guidance</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/94/service-8_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/94/service-8_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/94/service-8_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Supplement guidance" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+      <div class="inc-card">
+        <span class="inc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 9.6l5.1-2.9a.6.6 0 0 1 .9.5v9.6a.6.6 0 0 1-.9.5L16 14.4"/><rect x="2" y="5.5" width="14" height="13" rx="2.5"/></svg></span>
+        <span class="inc-card__label">Form video feedback analysis</span>
+        <span class="inc-card__shot"><img src="https://physiqueacademy.com/imager/uploads/home/3435/form-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp" srcset="https://physiqueacademy.com/imager/uploads/home/3435/form-home_09cf6b9b0345b17c8e1af6a6c77e0e3c.webp 300w, https://physiqueacademy.com/imager/uploads/home/3435/form-home_f7d20074b9f08a4971b4c7fbd7a9a907.webp 600w" sizes="140px" alt="Form video feedback analysis" loading="lazy" decoding="async" width="300" height="182"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT STORIES CAROUSELS -->
+<section class="stories-section">
+  <div style="text-align:center;padding:0 20px" data-reveal>
+    <h2>Real men. <span>Real stories.</span></h2>
+    <p>Swipe through how busy men just like you transformed, step by step.</p>
+  </div>
+  <div class="stories-grid" data-reveal>
+    <div class="story-carousel" data-story="sean"></div>
+    <div class="story-carousel" data-story="michael"></div>
+    <div class="story-carousel" data-story="paul"></div>
+    <div class="story-carousel" data-story="craig"></div>
+    <div class="story-carousel" data-story="djmichael"></div>
+    <div class="story-carousel" data-story="ronan"></div>
+  </div>
+</section>
+
 <!-- TRANSFORMATIONS -->
 <section class="transform-section">
   <div style="text-align:center;padding:0 20px" data-reveal>
-    <h2 style="font-size:clamp(26px,4.5vw,48px);font-weight:900;letter-spacing:-.025em;color:var(--text);line-height:1.05"><span style="color:var(--green-dark)">Busy Men Just Like You Have</span> <br>Transformed Their Lives</h2>
+    <h2 style="font-size:clamp(26px,4.5vw,48px);font-weight:900;letter-spacing:-.025em;color:var(--text);line-height:1.05"><span style="color:var(--green-dark)">Busy men just like you have</span> <br>transformed their lives</h2>
     <p style="font-size:16px;color:#000;font-weight:700;margin-top:12px">The difference between these men and the ones still stuck isn't talent or time.<br>It's the decision you just made.</p>
   </div>
   <div class="transform-grid" data-reveal>
@@ -542,7 +1008,7 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
     <button onclick="prevImage()" class="lb-btn" style="left:20px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;font-size:22px">&#8249;</button>
     <button onclick="nextImage()" class="lb-btn" style="right:20px;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;font-size:22px">&#8250;</button>
     <div style="max-width:860px;width:100%;text-align:center">
-      <img id="lb-img" src="" alt="" style="max-width:100%;max-height:82vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,0.8);object-fit:contain">
+      <img id="lb-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="max-width:100%;max-height:82vh;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,0.8);object-fit:contain">
       <p id="lb-name" style="margin-top:14px;font-size:15px;font-weight:700;color:#fff"></p>
       <p id="lb-counter" style="font-size:12px;color:#666;margin-top:4px"></p>
     </div>
@@ -551,11 +1017,206 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 
 
 
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="container" data-reveal>
+    <span style="display:inline-block;background:#1a1a1a;color:#fff;border:1px solid #1a1a1a;border-radius:999px;padding:4px 18px;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;">Our Promise</span>
+    <h2 style="white-space:nowrap"><em>Get the results</em> or you don't pay</h2>
+    <p>We back our programme completely. If you follow the system and don't get the transformation we mapped out together on your call, you don't pay a single cent. Your result is our responsibility.</p>
+  </div>
+  <div class="cta-inline" data-reveal>
+    <a href="javascript:void(0);" onclick="openBookingModal()" class="hero__cta">BOOK YOUR FREE CONSULTATION CALL</a>
+  </div>
+  <!-- GOOGLE REVIEWS -->
+  <div class="rv" data-reveal>
+    <div class="rv__bar">
+      <div class="rv__barL">
+        <span class="rv__brand"><svg class="rv-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.2-.4-4.7H24v8.9h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 9.5c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 2.9 29.9 1 24 1A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9.2 12.2-9.2z"/></svg><b>Reviews</b></span>
+        <span class="rv__agg"><b class="rv__score"></b><span class="rv__stars"></span><i class="rv__count"></i></span>
+      </div>
+      <a class="rv__btn" target="_blank" rel="noopener">Review us on Google</a>
+    </div>
+    <div class="rv__vp">
+      <div class="rv__track"></div>
+      <button class="rv__nav rv__nav--prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="rv__nav rv__nav--next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <script type="application/json" id="rv-data">{
+    "place": {
+      "name": "Physique Academy",
+      "rating": 4.8,
+      "total": 155,
+      "url": "https://www.google.com/maps?cid=10607656576692549180",
+      "reviewUrl": "https://search.google.com/local/writereview?placeid=ChIJxxrvx9AJe0gRPHYYaXT3NZM",
+      "placeId": "ChIJxxrvx9AJe0gRPHYYaXT3NZM"
+    },
+    "reviews": [
+      {
+        "name": "Jordan Sandmeyer",
+        "rating": 5,
+        "date": "9 months ago",
+        "text": "Got paired up with Dylan and it's been great. Knows his stuff, there when you need him, and we're getting the results. Highly recommend both the programme and Dylan.",
+        "months": 9
+      },
+      {
+        "name": "Felice Minieri",
+        "rating": 5,
+        "date": "11 months ago",
+        "text": "I've been training with Dylan McConachy for over a year now, he helped me achieve what I wanted with my body. I'm very happy with the results and the way that we interacted. He's always been to helpful and responsive and always ready to answer all my questions about nutrition, workouts and doubts about any exercise. I definitely recommend Dylan! I couldn't be happier!",
+        "months": 11
+      },
+      {
+        "name": "Chris Venturo",
+        "rating": 5,
+        "date": "11 months ago",
+        "text": "I've worked with trainer Ashely Smith who has been absolutely incredible. He has helped in just about every facet of my training from nutrition to work out plans to execution. He has not only been a trusted training/nutrition source but has also become a good friend. I cannot recommend the program enough. It's a simple fact if you follow their guidance, you will see results.",
+        "months": 11
+      },
+      {
+        "name": "Nick Eucker",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Incredible Program with even more incredible coaches. Everything from your daily nutrition to your weekly workouts are included in the program. Great access to your coach. Highly recommend.",
+        "months": 12
+      },
+      {
+        "name": "Gabriel Quinn",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Going almost two years in. Definitely worth it. My coach and my therapist have been phenomenal. Tried other online coaching before but this has been exceptional.",
+        "months": 12
+      },
+      {
+        "name": "Oliver Urban",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Shaun has been an amazing coach, he’s given me full support 24/7 and guided me well through my plan. What an absolute journey!",
+        "months": 12
+      },
+      {
+        "name": "Sean Anderson",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Physique Academy is the place to be for your Fitness needs. The coaching is Top Notch! They provide you with all the tools that you need to reach your fitness goals!",
+        "months": 12
+      },
+      {
+        "name": "Jamie Hushon - Brown",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Been on the program for 6 months now, genuinely been one of the best investments I've made. Yes there's been bumps along the road but on track to be in the best shape of my life in my 40s",
+        "months": 12
+      },
+      {
+        "name": "Luis Tirelli",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I've been with Physique Academy for over a year and only have good things to say. They are really committed in helping you throughout every step of your fitness journey.",
+        "months": 12
+      },
+      {
+        "name": "Keaton Lockwood",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "My trainer Dylan has been amazing to work with. From day one, he’s been an incredible coach. Supportive, insightful, and genuinely committed to my progress. There were times during my journey when I felt stuck or hit a low point, and every time, Dylan showed up with the right tools, guidance, and encouragement to help me push through. I can say I’m a changed person after working with Dylan.",
+        "months": 12
+      },
+      {
+        "name": "Matthew Stewart",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I have been on the Physique Academy program for 1 month now. And I believe if you want to part way with your money to join a program you want to know do you get results? And i can tell you, 100% you will, in the 1 month I am down about 3kg, with visible abs showing. The support from my coach Aaron, and in the whatsapp group is amazing, and i would highly recommend giving Physique Academy a serious consideration if you want to transform your body and mind!",
+        "months": 12
+      },
+      {
+        "name": "Vaughn Feighan",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I started with these guys 6 months ago and - even though my life has been a mess - these coaches and this program are relentless. They will stay on you until you give them what they want (and what you agreed the goals will be) every single day which is rare. Not only is the information and educational component immensely helpful, but the fact I don’t have to plan my workouts is a life saver and makes it so much easier to stick to.",
+        "months": 12
+      },
+      {
+        "name": "Lucas Ballasy",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "When I joined Physique Academy, a lot was changing in my life. I had just become a dad, was preparing for a big career shift, and felt lost in how to reach my goals after going from a powerlifting group to training alone at home. Working with my coach Ashley helped me rebuild structure and create consistency, while giving me the tools to achieve what I was after physically and mentally. It’s been an incredible journey, and I’m proud of what we’ve accomplished together.",
+        "months": 12
+      },
+      {
+        "name": "Tariq Al Zarouni",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I joined Physique Academy six months ago, and it’s been a life-changing experience. My coach, Mikey, has guided me every step of the way—through workouts, nutrition, and overall health. Thanks to his support and expertise, I’ve seen a major transformation both physically and mentally. I highly recommend Physique Academy, especially with Coach Mikey. It’s truly a pleasure to work with him!",
+        "months": 12
+      },
+      {
+        "name": "Andrew",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Among a sea of programs and coaches to choose from, Physique Academy truly stands out. I had very specific goals in mind and I was paired up with Mikey who developed a tailored plan to reach my goals. No cookie cutter approach here. It provided the structure I needed while being adaptable to the things that life throws at you. I not only reached my goal in phase 1 but also ended feeling and looking my best. You won’t regret investing in yourself and working with this team.",
+        "months": 12
+      },
+      {
+        "name": "Pablo Vazquez",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "Love working with Physique Academy and my coach Alex. Has helped changed my mindset with how I workout and my relationship with food. Would highly recommend the program to anyone looking for help in achieving their goals.",
+        "months": 12
+      },
+      {
+        "name": "Manuel Salazar",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I discovered Physique Academy on social media at the beginning of the year. I had been struggling with my weight for a very long time, and when they reached out to me, I decided to give it a try. After my first zoom call with Harry, I knew my life was about to change — and three months into the program, I can confidently say it has. My coach, Ashley, has helped me with everything — from proper training to personalized diet and meal plans. I highly recommend this program to anyone who wants to see real, sustainable results while maintaining a realistic work–life balance like myself.",
+        "months": 12
+      },
+      {
+        "name": "Joe Papanikitas",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I’ve been working with Ashley for around 18 months now, and I can honestly say he’s been fantastic — supportive, motivating, and a true mentor. He’s been there for me through the many highs and lows, always offering guidance and encouragement when I needed it most. Without his support, I genuinely think I would have thrown in the towel by now. Over the course of our time working together, I’ve managed to lose over 10 kilograms of fat while increasing my lean muscle mass. I feel more energetic, stronger, and more confident as a result. Physique Academy provides a truly unique and individually tailored program that adapts to each client’s needs, and I couldn’t recommend Ashley and the team highly enough.",
+        "months": 12
+      },
+      {
+        "name": "Salo D",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I’ve had a great experience with Physique Academy and my trainer Matt Carlisle. In the first 8 months, I lost about 35 pounds and developed a routine that’s improved my physical and mental health. I’d totally recommend the program to anyone looking to get in shape and learn how to eat better to fuel your body. Despite being in different time zones, my trainer is responsive and answers my questions when needed. At the moment, I’m continuing with the program to build muscle and plan to stay with Physique Academy long-term.",
+        "months": 12
+      },
+      {
+        "name": "Allen Read",
+        "rating": 5,
+        "date": "a year ago",
+        "text": "I’m a believer. Been working with Tyler at PA for almost 6 months. The change has been incredible. I’ve dropped about 25lbs in Phase 1 so far. But here’s what’s more important: Last month my Mom had a serious heart attack and because I’m the only child and she lives alone, it’s been up to me to help her get recovered and sorted. We live across the country from each other. So it’s been tough. But Tyler has been so amazing during this time. He’s been incredibly supportive, helped keep me focused & helped me prioritize. And now after almost a month, I’m headed home not having lost much ground, if any. So yeah. I am a believer in the program. And in Tyler.",
+        "months": 12
+      }
+    ]
+  }</script>
+</section>
+
+
+<!-- CONSULTATION STEPS -->
+<section class="steps">
+  <div class="steps__panel" data-reveal>
+    <h2>Book your <em>FREE</em> 30 minute consultation call</h2>
+    <div class="steps__row">
+      <div class="steps__item"><span class="steps__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="steps__label">Schedule a 30 minute call</span></div>
+      <span class="steps__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h16"/><path d="M14 6l6 6-6 6"/></svg></span>
+      <div class="steps__item"><span class="steps__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.6"/></svg></span><span class="steps__label">Discuss your goals with our team</span></div>
+      <span class="steps__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h16"/><path d="M14 6l6 6-6 6"/></svg></span>
+      <div class="steps__item"><span class="steps__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span><span class="steps__label">Create the best program for you</span></div>
+    </div>
+    <a href="javascript:void(0);" onclick="openBookingModal()" class="steps__cta">Book a free call</a>
+  </div>
+</section>
+
 <!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <div class="container" data-reveal>
     <h2 style="font-size:clamp(22px,4vw,40px);font-weight:900;letter-spacing:-.02em;color:var(--text)">Got Questions?</h2>
-    <h2 style="font-size:clamp(24px,3.5vw,40px);font-weight:900;letter-spacing:-.02em;color:var(--green-dark);margin-top:4px">Drop Us A Message On WhatsApp</h2>
+    <h2 style="font-size:clamp(24px,3.5vw,40px);font-weight:900;letter-spacing:-.02em;color:var(--green-dark);margin-top:4px">Drop us a message on WhatsApp</h2>
     <p style="font-size:15px;color:var(--gray);margin-top:14px">We'll get back to you within minutes.</p>
     <a href="https://go.physiqueacademy.com/whatsapp" target="_blank" rel="noopener" class="btn-wa">
       <svg viewBox="0 0 24 24" class="wa-svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -628,23 +1289,154 @@ document.addEventListener('keydown',e=>{
   document.querySelectorAll('.story-carousel').forEach(function(car){
     const slug=car.dataset.story;let idx=0;
     let track='<div class="story-track">';
-    for(let n=1;n<=STORY_COUNT;n++){track+='<div class="story-slide"><img src="'+STORY_BASE+'story-'+slug+'-'+n+'.webp" alt="Client transformation story" loading="lazy"></div>';}
+    for(let n=1;n<=STORY_COUNT;n++){track+='<div class="story-slide"><img src="'+STORY_BASE+'story-'+slug+'-'+n+'.webp" alt="Client transformation story" loading="lazy" draggable="false"></div>';}
     track+='</div>';
     let dots='<div class="story-dots">';
     for(let n=0;n<STORY_COUNT;n++){dots+='<button class="story-dot" data-i="'+n+'" aria-label="Slide '+(n+1)+'"></button>';}
     dots+='</div>';
     car.innerHTML='<div class="story-viewport">'+track+'<button class="story-nav story-nav--prev" aria-label="Previous">&#8249;</button><button class="story-nav story-nav--next" aria-label="Next">&#8250;</button>'+dots+'</div>';
     const trackEl=car.querySelector('.story-track');const dotEls=car.querySelectorAll('.story-dot');
-    function go(i){idx=(i+STORY_COUNT)%STORY_COUNT;trackEl.style.transform='translateX(-'+(idx*100)+'%)';dotEls.forEach(function(d,k){d.classList.toggle('active',k===idx)});}
+    const vp=car.querySelector('.story-viewport');
+    function paint(px){trackEl.style.transform='translateX(calc('+(-idx*100)+'% + '+px+'px))';}
+    function animate(){trackEl.style.transition='';void trackEl.offsetWidth;}
+    function go(i){idx=(i+STORY_COUNT)%STORY_COUNT;animate();paint(0);dotEls.forEach(function(d,k){d.classList.toggle('active',k===idx)});}
     car.querySelector('.story-nav--prev').addEventListener('click',function(){go(idx-1)});
     car.querySelector('.story-nav--next').addEventListener('click',function(){go(idx+1)});
     dotEls.forEach(function(d){d.addEventListener('click',function(){go(+d.dataset.i)})});
-    let sx=0,dxv=0,drag=false;const vp=car.querySelector('.story-viewport');
-    vp.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;dxv=0;drag=true},{passive:true});
-    vp.addEventListener('touchmove',function(e){if(drag)dxv=e.touches[0].clientX-sx},{passive:true});
-    vp.addEventListener('touchend',function(){if(drag&&Math.abs(dxv)>40)go(dxv<0?idx+1:idx-1);drag=false});
+
+    /* live drag: the track follows the pointer, mouse and touch alike */
+    let sx=0,sy=0,dx=0,drag=false,axis=null,pid=null;
+    vp.addEventListener('pointerdown',function(e){
+      if(e.button)return;
+      pid=e.pointerId;sx=e.clientX;sy=e.clientY;dx=0;drag=true;axis=null;
+    });
+    vp.addEventListener('pointermove',function(e){
+      if(!drag||e.pointerId!==pid)return;
+      const mx=e.clientX-sx,my=e.clientY-sy;
+      if(axis===null){
+        if(Math.abs(mx)<6&&Math.abs(my)<6)return;
+        /* vertical wins: let the page scroll, abandon the drag */
+        if(Math.abs(my)>=Math.abs(mx)){drag=false;return;}
+        axis='x';trackEl.style.transition='none';vp.classList.add('is-dragging');
+        try{vp.setPointerCapture(pid)}catch(_){}
+      }
+      dx=mx;
+      /* rubber-band at the two ends */
+      if((idx===0&&dx>0)||(idx===STORY_COUNT-1&&dx<0))dx*=.35;
+      paint(dx);
+    });
+    function release(){
+      if(!drag)return;
+      drag=false;vp.classList.remove('is-dragging');
+      const threshold=Math.min(60,(vp.clientWidth||300)*.15);
+      if(axis==='x'&&Math.abs(dx)>threshold)go(dx<0?idx+1:idx-1);else go(idx);
+      dx=0;axis=null;
+    }
+    vp.addEventListener('pointerup',release);
+    vp.addEventListener('pointercancel',release);
+    vp.addEventListener('dragstart',function(e){e.preventDefault()});
     go(0);
   });
+})();
+</script>
+
+<script>
+/* count-up for the scale numbers */
+(function(){
+  var els=document.querySelectorAll('.scale__n');
+  if(!els.length)return;
+  function fmt(v,sep){return sep?v.toLocaleString('en-GB'):String(v);}
+  function settle(el){el.textContent=fmt(+el.dataset.to,el.dataset.sep==='1');}
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    Array.prototype.forEach.call(els,settle);return;
+  }
+  function run(el){
+    var to=+el.dataset.to,sep=el.dataset.sep==='1',dur=1400,t0=performance.now();
+    (function step(now){
+      var p=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);
+      el.textContent=fmt(Math.round(to*e),sep);
+      if(p<1)requestAnimationFrame(step);else settle(el);
+    })(t0);
+  }
+  var io=new IntersectionObserver(function(ents){
+    ents.forEach(function(en){if(en.isIntersecting){run(en.target);io.unobserve(en.target);}});
+  },{threshold:.35});
+  Array.prototype.forEach.call(els,function(el){io.observe(el);});
+})();
+</script>
+
+<script>
+/* Google reviews, rendered from the #rv-data JSON block */
+(function(){
+  var root=document.querySelector('.rv'), raw=document.getElementById('rv-data');
+  if(!root||!raw)return;
+  var d; try{ d=JSON.parse(raw.textContent); }catch(e){ root.style.display='none'; return; }
+  if(!d||!d.reviews||!d.reviews.length){ root.style.display='none'; return; }
+  /* newest first */
+  d.reviews.sort(function(a,b){return (a.months||99)-(b.months||99);});
+
+  var STAR='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>', G='<svg class="rv-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.2-.4-4.7H24v8.9h11.8a10 10 0 0 1-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.3z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7A22 22 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.8 28.3a13.2 13.2 0 0 1 0-8.6v-5.7H4.5a22 22 0 0 0 0 20z"/><path fill="#EA4335" d="M24 9.5c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 2.9 29.9 1 24 1A22 22 0 0 0 4.5 14l7.3 5.7c1.7-5.2 6.5-9.2 12.2-9.2z"/></svg>';
+  var AV=['#5c6bc0','#26a69a','#ef6c57','#8d6e63','#7e57c2','#43a047','#0288d1','#c2185b'];
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function stars(n,cls){var o='';for(var i=1;i<=5;i++){
+    o+=STAR.replace('<svg','<svg class="'+(i<=Math.round(n)?'on':'')+'"');}
+    return '<span class="'+cls+'">'+o+'</span>';}
+  function hue(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return AV[h%AV.length];}
+
+  var p=d.place||{};
+  root.querySelector('.rv__score').textContent=(p.rating!=null?p.rating:'');
+  root.querySelector('.rv__count').textContent=(p.total!=null?'('+p.total+')':'');
+  root.querySelector('.rv__stars').outerHTML=stars(p.rating||0,'rv__stars');
+  var btn=root.querySelector('.rv__btn');
+  var rurl=p.reviewUrl||p.url;
+  if(rurl){btn.href=rurl;}else{btn.style.display='none';}
+
+  var track=root.querySelector('.rv__track');
+  track.innerHTML=d.reviews.map(function(r){
+    var nm=(r.name||'').trim(), ini=(nm||'?').charAt(0).toUpperCase();
+    var av=r.photo? '<span class="rvc__av" style="background-image:url('+esc(r.photo)+');background-size:cover"></span>'
+                  : '<span class="rvc__av" style="background:'+hue(nm||'x')+'">'+esc(ini)+'</span>';
+    return '<article class="rvc">'
+      +'<div class="rvc__top">'+av+'<span class="rvc__who">'
+        +'<span class="rvc__name">'+esc(nm)+'</span>'
+        +'<span class="rvc__date">'+esc(r.date||'')+'</span></span></div>'
+      +stars(r.rating||5,'rvc__stars')
+      +'<p class="rvc__text">'+esc(r.text||'')+'</p>'
+      +'<div class="rvc__src">'+G+'<span class="rvc__srcT">Posted on'
+        +(p.url?'<a href="'+esc(p.url)+'" target="_blank" rel="noopener">Google</a>':'<span>Google</span>')
+      +'</span></div>'
+      +'</article>';
+  }).join('');
+
+  /* read-more only where the text is really clipped; insert before the source row */
+  requestAnimationFrame(function(){
+    track.querySelectorAll('.rvc').forEach(function(c){
+      var t=c.querySelector('.rvc__text');
+      if(t.scrollHeight-t.clientHeight>4){
+        var b=document.createElement('button');
+        b.type='button'; b.className='rvc__more'; b.textContent='Read more';
+        b.addEventListener('click',function(){
+          b.textContent=c.classList.toggle('is-open')?'Show less':'Read more';
+        });
+        c.insertBefore(b,c.querySelector('.rvc__src'));
+      }
+    });
+  });
+
+  /* arrows */
+  var prev=root.querySelector('.rv__nav--prev'), next=root.querySelector('.rv__nav--next');
+  function step(){var c=track.querySelector('.rvc');return c?c.getBoundingClientRect().width+16:300;}
+  function sync(){
+    prev.disabled = track.scrollLeft<=2;
+    next.disabled = track.scrollLeft >= track.scrollWidth-track.clientWidth-2;
+  }
+  prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'})});
+  next.addEventListener('click',function(){track.scrollBy({left: step(),behavior:'smooth'})});
+  track.addEventListener('scroll',sync,{passive:true});
+  window.addEventListener('resize',sync);
+  sync();
 })();
 </script>
 </body>
