@@ -769,6 +769,29 @@ h1,h2,h3{text-wrap:balance}
   font-size:15px;font-weight:600;line-height:1.5;color:var(--text-secondary);
 }
 @media(max-width:700px){.included__note{font-size:14px;max-width:38ch;text-wrap:balance}}
+
+/* ===== tighten body copy on small screens =====
+   Centred paragraphs inherited the body's 1.6 line-height, which reads
+   loose in a narrow column. */
+@media(max-width:700px){
+  .transform-section p{line-height:1.42}
+  .guarantee p{line-height:1.45}
+  .program__subtitle{line-height:1.45}
+  .stories-section p{line-height:1.45}
+  .bottom-cta p{line-height:1.45}
+}
+
+/* ===== review arrows below the cards on phones =====
+   At the card edge they sat on the first words. A phone doesn't have
+   the gutter for it, so they become a centred pair underneath, which is
+   also an easier thumb target. */
+@media(max-width:700px){
+  .rv__vp{padding-bottom:54px}
+  .rv__nav{top:auto;bottom:2px;width:36px;height:36px;background:rgba(17,17,17,.62)}
+  .rv__nav svg{width:16px;height:16px}
+  .rv__nav--prev{left:calc(50% - 44px);right:auto;transform:rotate(180deg)}
+  .rv__nav--next{left:calc(50% + 8px);right:auto;transform:none}
+}
 </style>
 </head>
 <body>
