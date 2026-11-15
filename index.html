@@ -752,6 +752,16 @@ h1,h2,h3{text-wrap:balance}
   .hero__badge{font-size:11px;letter-spacing:.06em;padding:9px 16px;gap:8px}
   .hero__badge img{height:24px}
 }
+
+/* ===== CTA inside the video panel =====
+   .testi-scroll is both the panel and the grid, so the button has to
+   be a grid item that spans every column. */
+.testi-cta{grid-column:1 / -1;text-align:center;margin-top:20px}
+.testi-cta .hero__cta{margin:0}
+@media(max-width:700px){
+  .testi-cta{margin-top:14px}
+  .testi-cta .hero__cta{font-size:12px;padding:14px 20px;letter-spacing:.05em}
+}
 </style>
 </head>
 <body>
@@ -822,6 +832,7 @@ h1,h2,h3{text-wrap:balance}
     <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/pjlzx8jn96.js" async type="module"></script><style>wistia-player[media-id='pjlzx8jn96']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/pjlzx8jn96/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="pjlzx8jn96" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Damien M</div></div></div>
     <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/cgg7c79ggc.js" async type="module"></script><style>wistia-player[media-id='cgg7c79ggc']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/cgg7c79ggc/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="cgg7c79ggc" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Craig D</div></div></div>
     <div class="testi-card testi-card--hide-mobile"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/x31cxixvo2.js" async type="module"></script><style>wistia-player[media-id='x31cxixvo2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/x31cxixvo2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="x31cxixvo2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Chris M</div></div></div>
+    <div class="testi-cta" data-reveal><a href="javascript:void(0);" onclick="openBookingModal()" class="hero__cta">BOOK YOUR FREE CONSULTATION CALL</a></div>
   </div>
 </section>
 
