@@ -34,6 +34,11 @@ body .content-wrapper * {
 
 </style>
 
+<!-- Wistia runtime. This is what defines the <wistia-player> element;
+     the per-media modules only register their own media and cannot
+     define it on their own. Without this every video on the page sits
+     on its blurred poster forever, the hero included. -->
+<script src="https://fast.wistia.com/player.js" async></script>
 
 <style>
 .pa-ads-landing{box-sizing:border-box}
