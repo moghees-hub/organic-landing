@@ -792,6 +792,51 @@ h1,h2,h3{text-wrap:balance}
   .rv__nav--prev{left:calc(50% - 44px);right:auto;transform:rotate(180deg)}
   .rv__nav--next{left:calc(50% + 8px);right:auto;transform:none}
 }
+
+/* ===== mobile: bigger CTA, tighter tracking, panel off the edge =====
+   The label is 32 characters on one line (nowrap), so at 12px with .08em
+   tracking it was squeezed small. Tighter tracking buys the room to grow.
+   The panel sat 12px off the black section below it, because the 480px
+   rule overrides .problem padding to 28px 0 12px. */
+@media(max-width:700px){
+  .hero__cta,.cta-inline .hero__cta,.testi-cta .hero__cta{
+    font-size:13.5px;letter-spacing:.02em;padding:16px 22px;
+  }
+  .testi-scroll{
+    margin-left:18px;margin-right:18px;
+    padding:30px 16px 26px;border-radius:22px;
+  }
+  .problem{padding-bottom:40px}
+}
+
+/* ===== no dark panel on phones =====
+   The slab works on a wide screen where it reads as a contained object.
+   On a phone it fills the width and just looks like a black band, so the
+   cards sit on the page instead. Also more air under the payoff line. */
+@media(max-width:700px){
+  .testi-scroll{
+    background:none;box-shadow:none;border-radius:0;
+    margin-left:0;margin-right:0;padding:0 14px;
+    margin-top:32px;
+  }
+  /* cards need their normal border back, there is no dark ground now */
+  .testi-card{border-color:var(--border)}
+  .testi-cta{margin-top:22px}
+}
+
+/* ===== TESTIMONIAL POSTERS =====
+   The nine players load on approach, so the card itself has to hold the
+   shape and the poster. It cannot be left to wistia-player:not(:defined):
+   the hero video's module defines that element for the whole page the
+   moment it loads, which would drop every deferred card to black. */
+.testi-card__thumb[data-media]{position:relative;aspect-ratio:9/16}
+.testi-card__thumb[data-media]::before{
+  content:'';position:absolute;inset:0;
+  background:center/contain no-repeat var(--poster);filter:blur(5px);
+}
+.testi-card__thumb[data-media] > wistia-player{
+  position:absolute;inset:0;width:100%;height:100%;display:block;
+}
 </style>
 </head>
 <body>
@@ -806,7 +851,7 @@ h1,h2,h3{text-wrap:balance}
   <div class="container">
     <div data-reveal>
       <div class="hero__badge">
-        <img src="https://physiqueacademy.com/imager/uploads/974/3-profiles_ab41f875162db91244b563cc56973bbf.png" alt="Members" style="height:28px;border-radius:50px">
+        <img src="https://physiqueacademy.com/imager/uploads/974/3-profiles_ab41f875162db91244b563cc56973bbf.png" alt="Members" width="300" height="124" style="height:28px;width:auto;border-radius:50px">
         <span class="hero__badge-lg">Join Over 5,000 Men Who Took Action</span>
         <span class="hero__badge-sm">5,000+ Men Who Took Action</span>
       </div>
@@ -853,15 +898,15 @@ h1,h2,h3{text-wrap:balance}
     <p class="problem__payoff">They did it anyway.</p>
   </div>
   <div class="testi-scroll" data-reveal>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/v6wrydquwp.js" async type="module"></script><style>wistia-player[media-id='v6wrydquwp']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/v6wrydquwp/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="v6wrydquwp" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Ross G</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/hjwdqzarde.js" async type="module"></script><style>wistia-player[media-id='hjwdqzarde']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/hjwdqzarde/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="hjwdqzarde" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Matt B</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/mr9467u1c2.js" async type="module"></script><style>wistia-player[media-id='mr9467u1c2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/mr9467u1c2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="mr9467u1c2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Hans R</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/bqfnlg1d6w.js" async type="module"></script><style>wistia-player[media-id='bqfnlg1d6w']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/bqfnlg1d6w/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="bqfnlg1d6w" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Marc K</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/j7ot6eeo0c.js" async type="module"></script><style>wistia-player[media-id='j7ot6eeo0c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/j7ot6eeo0c/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="j7ot6eeo0c" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Joe S</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/hbpw88758w.js" async type="module"></script><style>wistia-player[media-id='hbpw88758w']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/hbpw88758w/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="hbpw88758w" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Rob J</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/pjlzx8jn96.js" async type="module"></script><style>wistia-player[media-id='pjlzx8jn96']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/pjlzx8jn96/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="pjlzx8jn96" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Damien M</div></div></div>
-    <div class="testi-card"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/cgg7c79ggc.js" async type="module"></script><style>wistia-player[media-id='cgg7c79ggc']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/cgg7c79ggc/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="cgg7c79ggc" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Craig D</div></div></div>
-    <div class="testi-card testi-card--hide-mobile"><div class="testi-card__thumb"><script src="https://fast.wistia.com/embed/x31cxixvo2.js" async type="module"></script><style>wistia-player[media-id='x31cxixvo2']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/x31cxixvo2/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style><wistia-player media-id="x31cxixvo2" aspect="0.5625"></wistia-player></div><div class="testi-card__body"><div class="testi-card__name">Chris M</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="v6wrydquwp" style="--poster:url('https://fast.wistia.com/embed/medias/v6wrydquwp/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Ross G</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="hjwdqzarde" style="--poster:url('https://fast.wistia.com/embed/medias/hjwdqzarde/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Matt B</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="mr9467u1c2" style="--poster:url('https://fast.wistia.com/embed/medias/mr9467u1c2/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Hans R</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="bqfnlg1d6w" style="--poster:url('https://fast.wistia.com/embed/medias/bqfnlg1d6w/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Marc K</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="j7ot6eeo0c" style="--poster:url('https://fast.wistia.com/embed/medias/j7ot6eeo0c/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Joe S</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="hbpw88758w" style="--poster:url('https://fast.wistia.com/embed/medias/hbpw88758w/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Rob J</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="pjlzx8jn96" style="--poster:url('https://fast.wistia.com/embed/medias/pjlzx8jn96/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Damien M</div></div></div>
+    <div class="testi-card"><div class="testi-card__thumb" data-media="cgg7c79ggc" style="--poster:url('https://fast.wistia.com/embed/medias/cgg7c79ggc/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Craig D</div></div></div>
+    <div class="testi-card testi-card--hide-mobile"><div class="testi-card__thumb" data-media="x31cxixvo2" style="--poster:url('https://fast.wistia.com/embed/medias/x31cxixvo2/swatch')"></div><div class="testi-card__body"><div class="testi-card__name">Chris M</div></div></div>
     <div class="testi-cta" data-reveal><a href="javascript:void(0);" onclick="openBookingModal()" class="hero__cta">BOOK YOUR FREE CONSULTATION CALL</a></div>
   </div>
 </section>
@@ -1024,46 +1069,46 @@ h1,h2,h3{text-wrap:balance}
     <p style="font-size:16px;color:#000;font-weight:700;margin-top:12px">The difference between these men and the ones still stuck isn't talent or time.<br>It's that they decided to start.</p>
   </div>
   <div class="transform-grid" data-reveal>
-    <div class="transform-card" onclick="openLightbox(0)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/mike-teagle.webp" alt="Mike Teagle" loading="lazy"></div><div class="transform-card__name">Mike Teagle</div></div>
-    <div class="transform-card" onclick="openLightbox(1)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/alessandro-cusuman.webp" alt="Alessandro Cusuman" loading="lazy"></div><div class="transform-card__name">Alessandro Cusuman</div></div>
-    <div class="transform-card" onclick="openLightbox(2)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/andre-hoffman.webp" alt="Andre Hoffman" loading="lazy"></div><div class="transform-card__name">Andre Hoffman</div></div>
-    <div class="transform-card" onclick="openLightbox(3)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/chris-hadley.webp" alt="Chris Hadley" loading="lazy"></div><div class="transform-card__name">Chris Hadley</div></div>
-    <div class="transform-card" onclick="openLightbox(4)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/chris-tiloltson.webp" alt="Chris Tiloltson" loading="lazy"></div><div class="transform-card__name">Chris Tiloltson</div></div>
-    <div class="transform-card" onclick="openLightbox(5)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/daniel-mcdonald.webp" alt="Daniel McDonald" loading="lazy"></div><div class="transform-card__name">Daniel McDonald</div></div>
-    <div class="transform-card" onclick="openLightbox(6)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/darvin-legaspi.webp" alt="Darvin Legaspi" loading="lazy"></div><div class="transform-card__name">Darvin Legaspi</div></div>
-    <div class="transform-card" onclick="openLightbox(7)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/john-martin.webp" alt="John Martin" loading="lazy"></div><div class="transform-card__name">John Martin</div></div>
-    <div class="transform-card" onclick="openLightbox(8)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/joush-hutton.webp" alt="Joush Hutton" loading="lazy"></div><div class="transform-card__name">Joush Hutton</div></div>
-    <div class="transform-card" onclick="openLightbox(9)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/magnus-stohle.webp" alt="Magnus Stohle" loading="lazy"></div><div class="transform-card__name">Magnus Stohle</div></div>
-    <div class="transform-card" onclick="openLightbox(10)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/matt-barr.webp" alt="Matt Barr" loading="lazy"></div><div class="transform-card__name">Matt Barr</div></div>
-    <div class="transform-card" onclick="openLightbox(11)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/nigel-perera.webp" alt="Nigel Perera" loading="lazy"></div><div class="transform-card__name">Nigel Perera</div></div>
-    <div class="transform-card" onclick="openLightbox(12)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/ross-atkins.webp" alt="Ross Atkins" loading="lazy"></div><div class="transform-card__name">Ross Atkins</div></div>
-    <div class="transform-card" onclick="openLightbox(13)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/sam-lightfoot.webp" alt="Sam Lightfoot" loading="lazy"></div><div class="transform-card__name">Sam Lightfoot</div></div>
-    <div class="transform-card" onclick="openLightbox(14)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tim-russell.webp" alt="Tim Russell" loading="lazy"></div><div class="transform-card__name">Tim Russell</div></div>
-    <div class="transform-card" onclick="openLightbox(15)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tom-collins.webp" alt="Tom Collins" loading="lazy"></div><div class="transform-card__name">Tom Collins</div></div>
-    <div class="transform-card" onclick="openLightbox(16)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tommy-cindahl.webp" alt="Tommy Cindahl" loading="lazy"></div><div class="transform-card__name">Tommy Cindahl</div></div>
-    <div class="transform-card" onclick="openLightbox(17)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/jason-wilson.webp" alt="Jason Wilson" loading="lazy"></div><div class="transform-card__name">Jason Wilson</div></div>
-    <div class="transform-card" onclick="openLightbox(18)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/craig-dinblebee.webp" alt="Craig Dimblebee" loading="lazy"></div><div class="transform-card__name">Craig Dimblebee</div></div>
-    <div class="transform-card" onclick="openLightbox(19)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/damien-barr.webp" alt="Damian Barr" loading="lazy"></div><div class="transform-card__name">Damian Barr</div></div>
-    <div class="transform-card" onclick="openLightbox(20)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/dave-hanrahan.webp" alt="Dave Hanrahan" loading="lazy"></div><div class="transform-card__name">Dave Hanrahan</div></div>
-    <div class="transform-card" onclick="openLightbox(21)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tony-kopa.webp" alt="Tony Kopa" loading="lazy"></div><div class="transform-card__name">Tony Kopa</div></div>
-    <div class="transform-card" onclick="openLightbox(22)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/federico-testa.webp" alt="Federico Testa" loading="lazy"></div><div class="transform-card__name">Federico Testa</div></div>
-    <div class="transform-card" onclick="openLightbox(23)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/joe-smithey.webp" alt="Joe Smithey" loading="lazy"></div><div class="transform-card__name">Joe Smithey</div></div>
-    <div class="transform-card" onclick="openLightbox(24)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/reed-burton.webp" alt="Reed Burton" loading="lazy"></div><div class="transform-card__name">Reed Burton</div></div>
-    <div class="transform-card" onclick="openLightbox(25)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/ricardo-escobedo.webp" alt="Ricardo Escobedo" loading="lazy"></div><div class="transform-card__name">Ricardo Escobedo</div></div>
-    <div class="transform-card" onclick="openLightbox(26)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/russell-smalley.webp" alt="Russell Smalley" loading="lazy"></div><div class="transform-card__name">Russell Smalley</div></div>
-    <div class="transform-card" onclick="openLightbox(27)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/steven-manirath.webp" alt="Steven Manirath" loading="lazy"></div><div class="transform-card__name">Steven Manirath</div></div>
-    <div class="transform-card" onclick="openLightbox(28)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/alex-bond.webp" alt="Alex Bond" loading="lazy"></div><div class="transform-card__name">Alex Bond</div></div>
-    <div class="transform-card" onclick="openLightbox(29)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/joe-schafer.webp" alt="Joe Schafer" loading="lazy"></div><div class="transform-card__name">Joe Schafer</div></div>
-    <div class="transform-card" onclick="openLightbox(30)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/sean-kelly.webp" alt="Sean Kelly" loading="lazy"></div><div class="transform-card__name">Sean Kelly</div></div>
-    <div class="transform-card" onclick="openLightbox(31)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tim-giessauf.webp" alt="Tim Giessauf" loading="lazy"></div><div class="transform-card__name">Tim Giessauf</div></div>
-    <div class="transform-card" onclick="openLightbox(32)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/luke-salmons.webp" alt="Luke Salmons" loading="lazy"></div><div class="transform-card__name">Luke Salmons</div></div>
-    <div class="transform-card" onclick="openLightbox(33)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/zack-bennema.webp" alt="Zack Bennema" loading="lazy"></div><div class="transform-card__name">Zack Bennema</div></div>
-    <div class="transform-card" onclick="openLightbox(34)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/aaron-lake.webp" alt="Aaron Lake" loading="lazy"></div><div class="transform-card__name">Aaron Lake</div></div>
-    <div class="transform-card" onclick="openLightbox(35)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/jake-mcdonell.webp" alt="Jake McDonell" loading="lazy"></div><div class="transform-card__name">Jake McDonell</div></div>
-    <div class="transform-card" onclick="openLightbox(36)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/jake-carus.webp" alt="Jake Carus" loading="lazy"></div><div class="transform-card__name">Jake Carus</div></div>
-    <div class="transform-card" onclick="openLightbox(37)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/andy-taylor.webp" alt="Andy Taylor" loading="lazy"></div><div class="transform-card__name">Andy Taylor</div></div>
-    <div class="transform-card" onclick="openLightbox(38)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/alex-purcell.webp" alt="Alex Purcell" loading="lazy"></div><div class="transform-card__name">Alex Purcell</div></div>
-    <div class="transform-card" onclick="openLightbox(39)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/oliver-urban.webp" alt="Oliver Urban" loading="lazy"></div><div class="transform-card__name">Oliver Urban</div></div>
+    <div class="transform-card" onclick="openLightbox(0)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/mike-teagle.webp" alt="Mike Teagle" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Mike Teagle</div></div>
+    <div class="transform-card" onclick="openLightbox(1)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/alessandro-cusuman.webp" alt="Alessandro Cusuman" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Alessandro Cusuman</div></div>
+    <div class="transform-card" onclick="openLightbox(2)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/andre-hoffman.webp" alt="Andre Hoffman" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Andre Hoffman</div></div>
+    <div class="transform-card" onclick="openLightbox(3)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/chris-hadley.webp" alt="Chris Hadley" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Chris Hadley</div></div>
+    <div class="transform-card" onclick="openLightbox(4)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/chris-tiloltson.webp" alt="Chris Tiloltson" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Chris Tiloltson</div></div>
+    <div class="transform-card" onclick="openLightbox(5)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/daniel-mcdonald.webp" alt="Daniel McDonald" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Daniel McDonald</div></div>
+    <div class="transform-card" onclick="openLightbox(6)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/darvin-legaspi.webp" alt="Darvin Legaspi" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Darvin Legaspi</div></div>
+    <div class="transform-card" onclick="openLightbox(7)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/john-martin.webp" alt="John Martin" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">John Martin</div></div>
+    <div class="transform-card" onclick="openLightbox(8)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/joush-hutton.webp" alt="Joush Hutton" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Joush Hutton</div></div>
+    <div class="transform-card" onclick="openLightbox(9)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/magnus-stohle.webp" alt="Magnus Stohle" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Magnus Stohle</div></div>
+    <div class="transform-card" onclick="openLightbox(10)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/matt-barr.webp" alt="Matt Barr" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Matt Barr</div></div>
+    <div class="transform-card" onclick="openLightbox(11)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/nigel-perera.webp" alt="Nigel Perera" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Nigel Perera</div></div>
+    <div class="transform-card" onclick="openLightbox(12)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/ross-atkins.webp" alt="Ross Atkins" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Ross Atkins</div></div>
+    <div class="transform-card" onclick="openLightbox(13)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/sam-lightfoot.webp" alt="Sam Lightfoot" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Sam Lightfoot</div></div>
+    <div class="transform-card" onclick="openLightbox(14)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tim-russell.webp" alt="Tim Russell" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Tim Russell</div></div>
+    <div class="transform-card" onclick="openLightbox(15)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tom-collins.webp" alt="Tom Collins" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Tom Collins</div></div>
+    <div class="transform-card" onclick="openLightbox(16)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tommy-cindahl.webp" alt="Tommy Cindahl" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Tommy Cindahl</div></div>
+    <div class="transform-card" onclick="openLightbox(17)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/jason-wilson.webp" alt="Jason Wilson" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Jason Wilson</div></div>
+    <div class="transform-card" onclick="openLightbox(18)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/craig-dinblebee.webp" alt="Craig Dimblebee" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Craig Dimblebee</div></div>
+    <div class="transform-card" onclick="openLightbox(19)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/damien-barr.webp" alt="Damian Barr" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Damian Barr</div></div>
+    <div class="transform-card" onclick="openLightbox(20)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/dave-hanrahan.webp" alt="Dave Hanrahan" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Dave Hanrahan</div></div>
+    <div class="transform-card" onclick="openLightbox(21)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tony-kopa.webp" alt="Tony Kopa" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Tony Kopa</div></div>
+    <div class="transform-card" onclick="openLightbox(22)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/federico-testa.webp" alt="Federico Testa" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Federico Testa</div></div>
+    <div class="transform-card" onclick="openLightbox(23)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/joe-smithey.webp" alt="Joe Smithey" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Joe Smithey</div></div>
+    <div class="transform-card" onclick="openLightbox(24)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/reed-burton.webp" alt="Reed Burton" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Reed Burton</div></div>
+    <div class="transform-card" onclick="openLightbox(25)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/ricardo-escobedo.webp" alt="Ricardo Escobedo" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Ricardo Escobedo</div></div>
+    <div class="transform-card" onclick="openLightbox(26)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/russell-smalley.webp" alt="Russell Smalley" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Russell Smalley</div></div>
+    <div class="transform-card" onclick="openLightbox(27)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/steven-manirath.webp" alt="Steven Manirath" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Steven Manirath</div></div>
+    <div class="transform-card" onclick="openLightbox(28)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/alex-bond.webp" alt="Alex Bond" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Alex Bond</div></div>
+    <div class="transform-card" onclick="openLightbox(29)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/joe-schafer.webp" alt="Joe Schafer" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Joe Schafer</div></div>
+    <div class="transform-card" onclick="openLightbox(30)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/sean-kelly.webp" alt="Sean Kelly" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Sean Kelly</div></div>
+    <div class="transform-card" onclick="openLightbox(31)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/tim-giessauf.webp" alt="Tim Giessauf" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Tim Giessauf</div></div>
+    <div class="transform-card" onclick="openLightbox(32)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/luke-salmons.webp" alt="Luke Salmons" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Luke Salmons</div></div>
+    <div class="transform-card" onclick="openLightbox(33)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/zack-bennema.webp" alt="Zack Bennema" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Zack Bennema</div></div>
+    <div class="transform-card" onclick="openLightbox(34)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/aaron-lake.webp" alt="Aaron Lake" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Aaron Lake</div></div>
+    <div class="transform-card" onclick="openLightbox(35)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/jake-mcdonell.webp" alt="Jake McDonell" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Jake McDonell</div></div>
+    <div class="transform-card" onclick="openLightbox(36)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/jake-carus.webp" alt="Jake Carus" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Jake Carus</div></div>
+    <div class="transform-card" onclick="openLightbox(37)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/andy-taylor.webp" alt="Andy Taylor" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Andy Taylor</div></div>
+    <div class="transform-card" onclick="openLightbox(38)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/alex-purcell.webp" alt="Alex Purcell" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Alex Purcell</div></div>
+    <div class="transform-card" onclick="openLightbox(39)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/oliver-urban.webp" alt="Oliver Urban" width="1080" height="1080" loading="lazy"></div><div class="transform-card__name">Oliver Urban</div></div>
   </div>
 
 
@@ -1354,7 +1399,7 @@ document.addEventListener('keydown',e=>{
   document.querySelectorAll('.story-carousel').forEach(function(car){
     const slug=car.dataset.story;let idx=0;
     let track='<div class="story-track">';
-    for(let n=1;n<=STORY_COUNT;n++){track+='<div class="story-slide"><img src="'+STORY_BASE+'story-'+slug+'-'+n+'.webp" alt="Client transformation story" loading="lazy" draggable="false"></div>';}
+    for(let n=1;n<=STORY_COUNT;n++){track+='<div class="story-slide"><img src="'+STORY_BASE+'story-'+slug+'-'+n+'.webp" alt="Client transformation story" width="1080" height="1440" loading="lazy" draggable="false"></div>';}
     track+='</div>';
     let dots='<div class="story-dots">';
     for(let n=0;n<STORY_COUNT;n++){dots+='<button class="story-dot" data-i="'+n+'" aria-label="Slide '+(n+1)+'"></button>';}
@@ -1502,6 +1547,45 @@ document.addEventListener('keydown',e=>{
   track.addEventListener('scroll',sync,{passive:true});
   window.addEventListener('resize',sync);
   sync();
+})();
+</script>
+
+<script>
+/* Testimonial videos: load the nine Wistia player modules on approach.
+   They used to load at page open - roughly 2 MB of JavaScript for players
+   nobody had scrolled to, which was the single biggest drag on the mobile
+   score. Each card keeps its blurred swatch poster and its 9:16 shape in
+   CSS, so nothing moves and nothing goes black while they wait. The hero
+   video still loads eagerly: it is the first thing on screen. */
+(function(){
+  var done=false;
+  function load(){
+    if(done){return;} done=true;
+    document.querySelectorAll('.testi-scroll [data-media]').forEach(function(thumb){
+      var id=thumb.getAttribute('data-media');
+      var p=document.createElement('wistia-player');
+      p.setAttribute('media-id',id);
+      p.setAttribute('aspect','0.5625');
+      thumb.appendChild(p);
+      var s=document.createElement('script');
+      s.src='https://fast.wistia.com/embed/'+id+'.js';
+      s.async=true; s.type='module';
+      document.head.appendChild(s);
+    });
+  }
+  function start(){
+    var panel=document.querySelector('.testi-scroll');
+    if(!panel||!('IntersectionObserver' in window)){ load(); return; }
+    var io=new IntersectionObserver(function(es){
+      for(var i=0;i<es.length;i++){
+        if(es[i].isIntersecting){ io.disconnect(); load(); return; }
+      }
+    },{rootMargin:'600px 0px'});
+    io.observe(panel);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',start);
+  } else { start(); }
 })();
 </script>
 </body>
