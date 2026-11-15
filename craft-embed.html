@@ -625,7 +625,11 @@ body .content-wrapper * {
   .pa-ads-landing .rv{margin-top:22px;--rv-gap:12px}
   .pa-ads-landing .rv__track{grid-auto-columns:86%}
   .pa-ads-landing .rv__btn{width:100%;text-align:center}
-  .pa-ads-landing .rv__nav{display:none}
+  /* keep the arrows on mobile: a peeking card alone doesn't read as swipeable */
+  .pa-ads-landing .rv__nav{width:30px;height:30px}
+  .pa-ads-landing .rv__nav svg{width:14px;height:14px}
+  .pa-ads-landing .rv__nav--prev{left:-13px}
+  .pa-ads-landing .rv__nav--next{right:-13px}
   .pa-ads-landing .rvc__text{font-size:15px;line-height:22px}
 }
 
@@ -691,6 +695,27 @@ body .content-wrapper * {
 /* ===== sticky top bar removed: reclaim the space it was holding ===== */
 .pa-ads-landing .hero{padding-top:44px}
 @media(max-width:700px){.pa-ads-landing .hero{padding-top:34px}}
+
+/* ===== even out heading line breaks, and lift the proof lead =====
+   The <br> in the headings is switched off on small screens, so they
+   wrapped freely and stranded short words on their own line. */
+.pa-ads-landing h1,.pa-ads-landing h2,.pa-ads-landing h3{text-wrap:balance}
+@media(max-width:700px){
+  .pa-ads-landing .problem h2{letter-spacing:-.03em;line-height:1.14}
+  .pa-ads-landing .problem p.problem__lead{font-size:16px;font-weight:700;color:#3f4549;max-width:30ch}
+}
+
+/* ===== hero badge: one line on phones =====
+   The full wording needs about 340px of text at 12px, so on a phone it
+   wrapped and stranded the last word. Shorter line, tighter tracking and
+   a nowrap so it can never break. The avatars already imply "join". */
+.pa-ads-landing .hero__badge-sm{display:none}
+@media(max-width:700px){
+  .pa-ads-landing .hero__badge-lg{display:none}
+  .pa-ads-landing .hero__badge-sm{display:inline;white-space:nowrap}
+  .pa-ads-landing .hero__badge{font-size:11px;letter-spacing:.06em;padding:9px 16px;gap:8px}
+  .pa-ads-landing .hero__badge img{height:24px}
+}
 </style>
 
 <div class="pa-ads-landing">
@@ -706,7 +731,8 @@ body .content-wrapper * {
       <div data-reveal>
         <div class="hero__badge">
           <img src="https://physiqueacademy.com/imager/uploads/974/3-profiles_ab41f875162db91244b563cc56973bbf.png" alt="Members" style="height:28px;border-radius:50px">
-          Join Over 5,000 Men Who Took Action
+          <span class="hero__badge-lg">Join Over 5,000 Men Who Took Action</span>
+          <span class="hero__badge-sm">5,000+ Men Who Took Action</span>
         </div>
       </div>
       <h1 data-reveal><span style="white-space:nowrap">The man you are on the inside</span> <br><em style="white-space:nowrap">deserves to show on the outside.</em></h1>
@@ -958,9 +984,6 @@ body .content-wrapper * {
       <div class="transform-card" onclick="openPAAdsLightbox(39)"><div class="transform-card__visual"><img src="https://physique-academy.s3.amazonaws.com/transformations/oliver-urban.webp" alt="Oliver Urban" loading="lazy"></div><div class="transform-card__name">Oliver Urban</div></div>
     </div>
 
-    <div class="cta-inline" style="margin-top:28px" data-reveal>
-      <a href="javascript:void(0);" onclick="openPAAdsBookingModal()" class="hero__cta">BOOK YOUR FREE CONSULTATION CALL</a>
-    </div>
 
     <!-- LIGHTBOX -->
     <div id="pa-ads-lightbox">
