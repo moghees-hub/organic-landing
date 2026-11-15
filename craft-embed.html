@@ -851,7 +851,7 @@ body .content-wrapper * {
             <div class="phase-stats">
               <div><strong>10–12%</strong> Target Body Fat</div>
               <div><strong>1000s</strong> Men Transformed</div>
-              <div><strong>100%</strong> Intelligent Execution</div>
+              <div><strong>30 days</strong> Start seeing results</div>
             </div>
           </div>
         </div>
@@ -1282,7 +1282,8 @@ function closePAAdsBookingModal(){document.getElementById('pa-ads-bookingModal')
 window.openPAAdsBookingModal=openPAAdsBookingModal;
 window.togglePAPhase=function(el){const items=el.closest('.phase-accordion').querySelectorAll('.phase-item');const wasActive=el.classList.contains('active');items.forEach(i=>i.classList.remove('active'));if(!wasActive)el.classList.add('active')};
 // Auto-open first phase
-if(window.innerWidth>768){const paFirstPhase=document.querySelector('.pa-ads-landing .phase-item');if(paFirstPhase)paFirstPhase.classList.add('active');}
+/* open the first phase everywhere: on mobile all three sat closed */
+{const paFirstPhase=document.querySelector('.pa-ads-landing .phase-item');if(paFirstPhase)paFirstPhase.classList.add('active');}
 window.closePAAdsBookingModal=closePAAdsBookingModal;
 document.getElementById('pa-ads-bookingModal').addEventListener('click',function(e){if(e.target===this)closePAAdsBookingModal()});
 
