@@ -34,10 +34,7 @@ body .content-wrapper * {
 
 </style>
 
-<!-- Wistia runtime. This is what defines the <wistia-player> element;
-     the per-media modules only register their own media and cannot
-     define it on their own. Without this every video on the page sits
-     on its blurred poster forever, the hero included. -->
+<!-- wistia runtime: defines <wistia-player>. required, do not remove -->
 <script src="https://fast.wistia.com/player.js" async></script>
 
 <style>
@@ -283,7 +280,7 @@ body .content-wrapper * {
   .pa-ads-landing .cta-inline .hero__cta{font-size:12px;padding:12px 10px;white-space:nowrap}
 }
 
-/* ===== HERO: PA 'A' monogram, greyscale, full height of the hero ===== */
+/* hero monogram */
 .pa-ads-landing .hero{position:relative;overflow:hidden}
 .pa-ads-landing .hero::before{
   content:'';display:block;position:absolute;z-index:0;pointer-events:none;
@@ -299,7 +296,7 @@ body .content-wrapper * {
 @media(max-width:1100px){.hero::before{left:-22%;opacity:.055}}
 @media(max-width:700px){.hero::before{left:-30%;opacity:.05}}
 
-/* ===== HERO SUB: panel ===== */
+/* HERO SUB */
 .pa-ads-landing .hero__sub{
   display:inline-block;
   font-size:18px;
@@ -318,7 +315,7 @@ body .content-wrapper * {
 .pa-ads-landing .hero__sub strong{color:#7FC838;font-weight:700}
 @media(max-width:900px){.hero__sub{font-size:16px;padding:14px 18px;max-width:46ch}}
 
-/* ===== VIDEO TESTIMONIALS: contained dark panel ===== */
+/* VIDEO TESTIMONIALS */
 .pa-ads-landing .problem{position:relative;padding-bottom:56px}
 .pa-ads-landing .testi-scroll{
   position:relative;z-index:2;margin-top:34px;
@@ -335,9 +332,7 @@ body .content-wrapper * {
                 gap:14px;margin-left:14px;margin-right:14px}
 }
 
-/* the PA 'A' parked behind the panel - viewport-fixed, so the panel
-   slides over it on scroll. iOS ignores fixed attachment, so small
-   screens get a static mark instead. */
+/* monogram behind the panel, fixed attachment (static on iOS) */
 .pa-ads-landing .problem::before{
   content:'';position:absolute;z-index:0;pointer-events:none;
   inset:0;
@@ -353,7 +348,7 @@ body .content-wrapper * {
                    background-position:right -90px center;opacity:.05}
 }
 
-/* ===== PROOF COPY: fragments small, payoff large ===== */
+/* PROOF COPY */
 .pa-ads-landing .problem p.problem__lead{
   font-size:17px;font-weight:600;color:#5b6165;
   margin-top:18px;line-height:1.7;
@@ -370,7 +365,7 @@ body .content-wrapper * {
   .pa-ads-landing .problem p.problem__payoff{margin-top:8px}
 }
 
-/* ===== STORY CAROUSELS: visible arrows + drag affordance ===== */
+/* story carousels */
 .pa-ads-landing .story-viewport{cursor:grab}
 .pa-ads-landing .story-viewport.is-dragging{cursor:grabbing}
 .pa-ads-landing .story-viewport img{user-select:none;-webkit-user-select:none;-webkit-user-drag:none}
@@ -384,7 +379,7 @@ body .content-wrapper * {
 .pa-ads-landing .story-nav:hover{background:#fff}
 .pa-ads-landing .story-nav:active{transform:translateY(-50%) scale(.94)}
 
-/* ===== SCALE: quiet figures, labels beneath ===== */
+/* SCALE */
 .pa-ads-landing .scale{background:var(--black);position:relative;overflow:hidden}
 .pa-ads-landing .scale::before{
   content:'';position:absolute;inset:0;pointer-events:none;
@@ -421,7 +416,7 @@ body .content-wrapper * {
   .pa-ads-landing .scale__lbl{margin-top:9px;font-size:11px;letter-spacing:.08em}
 }
 
-/* ===== WHAT IS INCLUDED: photo cards ===== */
+/* WHAT'S INCLUDED */
 .pa-ads-landing .included{background:var(--light);padding:54px 0 60px;border-top:1px solid var(--border)}
 .pa-ads-landing .included__inner{max-width:1180px;margin:0 auto;padding:0 20px;text-align:center}
 .pa-ads-landing .included__eyebrow{
@@ -473,7 +468,7 @@ body .content-wrapper * {
   .pa-ads-landing .inc-card__shot{flex-basis:92px;width:92px;height:58px;border-radius:11px}
 }
 
-/* ===== CONSULTATION STEPS ===== */
+/* CONSULTATION STEPS */
 .pa-ads-landing .steps{background:var(--light);padding:0 0 56px}
 .pa-ads-landing .steps__panel{
   max-width:1180px;margin:0 auto;padding:46px 28px 42px;
@@ -531,10 +526,7 @@ body .content-wrapper * {
   .pa-ads-landing .steps__cta{margin-top:24px;padding:15px 28px;font-size:15px}
 }
 
-/* ===== GOOGLE REVIEWS: our own, matched to the widget it replaces =====
-   Type, colours and spacing measured off the live Elfsight widget:
-   text 16/500/23 #111 . name 15/600/18 . date 12/500/16 at 50%
-   panels rgba(17,17,17,.05) r8 p24 . button #006DFF r4 . nav 32px at 50% */
+/* google reviews, styled to match the elfsight widget it replaced */
 .pa-ads-landing .rv{
   max-width:1180px;margin:30px auto 0;padding:0 20px;
   font-family:'Inter',sans-serif;color:#111;
@@ -603,8 +595,7 @@ body .content-wrapper * {
 .pa-ads-landing .rvc__srcT a{display:block;font-size:14px;font-weight:500;line-height:22px;color:var(--rv-blue);text-decoration:none}
 .pa-ads-landing .rvc__srcT a:hover{text-decoration:underline}
 
-/* the arrow overlaps the card edge by half its width only, so the
-   24px card padding always keeps it clear of the text */
+/* half-overlap keeps the arrow off the text */
 .pa-ads-landing .rv__nav{
   position:absolute;top:50%;z-index:2;
   width:32px;height:32px;border:0;border-radius:50%;padding:0;cursor:pointer;
@@ -627,7 +618,7 @@ body .content-wrapper * {
   .pa-ads-landing .rv{margin-top:22px;--rv-gap:12px}
   .pa-ads-landing .rv__track{grid-auto-columns:86%}
   .pa-ads-landing .rv__btn{width:100%;text-align:center}
-  /* keep the arrows on mobile: a peeking card alone doesn't read as swipeable */
+  /* keep the arrows on mobile */
   .pa-ads-landing .rv__nav{width:30px;height:30px}
   .pa-ads-landing .rv__nav svg{width:14px;height:14px}
   .pa-ads-landing .rv__nav--prev{left:-13px}
@@ -635,10 +626,7 @@ body .content-wrapper * {
   .pa-ads-landing .rvc__text{font-size:15px;line-height:22px}
 }
 
-/* ===== CLIENT STORIES: dark ground + the PA 'A' parked left =====
-   The mark is viewport-fixed, so it holds its place on screen while the
-   carousels scroll over it. iOS ignores fixed attachment, so small
-   screens get a smaller static mark instead. */
+/* client stories, fixed monogram (static on iOS) */
 .pa-ads-landing .stories-section{
   position:relative;
   background:var(--black);
@@ -670,15 +658,8 @@ body .content-wrapper * {
   }
 }
 
-/* ===== WIDTH SCALE =====
-   Nine content widths across the page made the content edge visibly
-   ragged on a wide screen. Three now, set here so future sections snap
-   to the scale instead of inventing a tenth value.
-     read  800  text you actually read
-     mid  1000  medium grids
-     wide 1180  wide grids and card rows
-   Two deliberate exceptions keep their own size: the hero column (860)
-   and the video panel (940), both chosen on purpose. */
+/* width scale: read 800 / mid 1000 / wide 1180.
+   hero 860 and the video panel 940 are deliberate exceptions */
 :root{--w-read:800px;--w-mid:1000px;--w-wide:1180px}
 
 .pa-ads-landing .problem .container{max-width:var(--w-read)}
@@ -694,23 +675,18 @@ body .content-wrapper * {
 .pa-ads-landing .rv{max-width:var(--w-wide)}
 .pa-ads-landing .transform-grid{max-width:var(--w-wide)}
 
-/* ===== sticky top bar removed: reclaim the space it was holding ===== */
+/* sticky top bar removed */
 .pa-ads-landing .hero{padding-top:44px}
 @media(max-width:700px){.pa-ads-landing .hero{padding-top:34px}}
 
-/* ===== even out heading line breaks, and lift the proof lead =====
-   The <br> in the headings is switched off on small screens, so they
-   wrapped freely and stranded short words on their own line. */
+/* heading line breaks, proof lead */
 .pa-ads-landing h1, .pa-ads-landing h2, .pa-ads-landing h3{text-wrap:balance}
 @media(max-width:700px){
   .pa-ads-landing .problem h2{letter-spacing:-.03em;line-height:1.14}
   .pa-ads-landing .problem p.problem__lead{font-size:16px;font-weight:700;color:#3f4549;max-width:30ch}
 }
 
-/* ===== hero badge: one line on phones =====
-   The full wording needs about 340px of text at 12px, so on a phone it
-   wrapped and stranded the last word. Shorter line, tighter tracking and
-   a nowrap so it can never break. The avatars already imply "join". */
+/* hero badge: one line on phones */
 .pa-ads-landing .hero__badge-sm{display:none}
 @media(max-width:700px){
   .pa-ads-landing .hero__badge-lg{display:none}
@@ -719,9 +695,7 @@ body .content-wrapper * {
   .pa-ads-landing .hero__badge img{height:24px}
 }
 
-/* ===== CTA inside the video panel =====
-   .testi-scroll is both the panel and the grid, so the button has to
-   be a grid item that spans every column. */
+/* CTA spans the grid: .testi-scroll is the panel and the grid both */
 .pa-ads-landing .testi-cta{grid-column:1 / -1;text-align:center;margin-top:20px}
 .pa-ads-landing .testi-cta .hero__cta{margin:0}
 @media(max-width:700px){
@@ -729,16 +703,14 @@ body .content-wrapper * {
   .pa-ads-landing .testi-cta .hero__cta{font-size:12px;padding:14px 20px;letter-spacing:.05em}
 }
 
-/* ===== included: the list is not the same on every plan ===== */
+/* the included list varies by plan */
 .pa-ads-landing .included__note{
   margin:14px auto 0;max-width:46ch;
   font-size:15px;font-weight:600;line-height:1.5;color:var(--text-secondary);
 }
 @media(max-width:700px){.pa-ads-landing .included__note{font-size:14px;max-width:38ch;text-wrap:balance}}
 
-/* ===== tighten body copy on small screens =====
-   Centred paragraphs inherited the body's 1.6 line-height, which reads
-   loose in a narrow column. */
+/* tighter body copy on small screens */
 @media(max-width:700px){
   .pa-ads-landing .transform-section p{line-height:1.42}
   .pa-ads-landing .guarantee p{line-height:1.45}
@@ -747,10 +719,7 @@ body .content-wrapper * {
   .pa-ads-landing .bottom-cta p{line-height:1.45}
 }
 
-/* ===== review arrows below the cards on phones =====
-   At the card edge they sat on the first words. A phone doesn't have
-   the gutter for it, so they become a centred pair underneath, which is
-   also an easier thumb target. */
+/* review arrows below the cards on phones */
 @media(max-width:700px){
   .pa-ads-landing .rv__vp{padding-bottom:54px}
   .pa-ads-landing .rv__nav{top:auto;bottom:2px;width:36px;height:36px;background:rgba(17,17,17,.62)}
@@ -759,11 +728,7 @@ body .content-wrapper * {
   .pa-ads-landing .rv__nav--next{left:calc(50% + 8px);right:auto;transform:none}
 }
 
-/* ===== mobile: bigger CTA, tighter tracking, panel off the edge =====
-   The label is 32 characters on one line (nowrap), so at 12px with .08em
-   tracking it was squeezed small. Tighter tracking buys the room to grow.
-   The panel sat 12px off the black section below it, because the 480px
-   rule overrides .problem padding to 28px 0 12px. */
+/* mobile: bigger CTA, tighter tracking, panel inset */
 @media(max-width:700px){
   .pa-ads-landing .hero__cta, .pa-ads-landing .cta-inline .hero__cta, .pa-ads-landing .testi-cta .hero__cta{
     font-size:13.5px;letter-spacing:.02em;padding:16px 22px;
@@ -775,26 +740,20 @@ body .content-wrapper * {
   .pa-ads-landing .problem{padding-bottom:40px}
 }
 
-/* ===== no dark panel on phones =====
-   The slab works on a wide screen where it reads as a contained object.
-   On a phone it fills the width and just looks like a black band, so the
-   cards sit on the page instead. Also more air under the payoff line. */
+/* no dark panel on phones */
 @media(max-width:700px){
   .pa-ads-landing .testi-scroll{
     background:none;box-shadow:none;border-radius:0;
     margin-left:0;margin-right:0;padding:0 14px;
     margin-top:32px;
   }
-  /* cards need their normal border back, there is no dark ground now */
+  /* cards need their border back */
   .pa-ads-landing .testi-card{border-color:var(--border)}
   .pa-ads-landing .testi-cta{margin-top:22px}
 }
 
-/* ===== TESTIMONIAL POSTERS =====
-   The nine players load on approach, so the card itself has to hold the
-   shape and the poster. It cannot be left to wistia-player:not(:defined):
-   the hero video's module defines that element for the whole page the
-   moment it loads, which would drop every deferred card to black. */
+/* testimonial posters: the card holds the shape and the poster.
+   cannot use :not(:defined), the hero module defines it page-wide */
 .pa-ads-landing .testi-card__thumb[data-media]{position:relative;aspect-ratio:9/16}
 .pa-ads-landing .testi-card__thumb[data-media]::before{
   content:'';position:absolute;inset:0;
@@ -1320,7 +1279,7 @@ function closePAAdsBookingModal(){document.getElementById('pa-ads-bookingModal')
 window.openPAAdsBookingModal=openPAAdsBookingModal;
 window.togglePAPhase=function(el){const items=el.closest('.phase-accordion').querySelectorAll('.phase-item');const wasActive=el.classList.contains('active');items.forEach(i=>i.classList.remove('active'));if(!wasActive)el.classList.add('active')};
 // Auto-open first phase
-/* open the first phase everywhere: on mobile all three sat closed */
+/* open the first phase */
 {const paFirstPhase=document.querySelector('.pa-ads-landing .phase-item');if(paFirstPhase)paFirstPhase.classList.add('active');}
 window.closePAAdsBookingModal=closePAAdsBookingModal;
 document.getElementById('pa-ads-bookingModal').addEventListener('click',function(e){if(e.target===this)closePAAdsBookingModal()});
@@ -1374,7 +1333,7 @@ document.addEventListener('keydown',e=>{
     car.querySelector('.story-nav--next').addEventListener('click',function(){go(idx+1)});
     dotEls.forEach(function(d){d.addEventListener('click',function(){go(+d.dataset.i)})});
 
-    /* live drag: the track follows the pointer, mouse and touch alike */
+    /* drag: pointer events, mouse and touch */
     let sx=0,sy=0,dx=0,drag=false,axis=null,pid=null;
     vp.addEventListener('pointerdown',function(e){
       if(e.button)return;
@@ -1479,7 +1438,7 @@ document.addEventListener('keydown',e=>{
       +'</article>';
   }).join('');
 
-  /* read-more only where the text is really clipped; insert before the source row */
+  /* read-more only when clipped */
   requestAnimationFrame(function(){
     track.querySelectorAll('.rvc').forEach(function(c){
       var t=c.querySelector('.rvc__text');
@@ -1510,12 +1469,7 @@ document.addEventListener('keydown',e=>{
 </script>
 
 <script>
-/* Testimonial videos: load the nine Wistia player modules on approach.
-   They used to load at page open - roughly 2 MB of JavaScript for players
-   nobody had scrolled to, which was the single biggest drag on the mobile
-   score. Each card keeps its blurred swatch poster and its 9:16 shape in
-   CSS, so nothing moves and nothing goes black while they wait. The hero
-   video still loads eagerly: it is the first thing on screen. */
+/* load the testimonial players on approach, not at page open */
 (function(){
   var done=false;
   function load(){
